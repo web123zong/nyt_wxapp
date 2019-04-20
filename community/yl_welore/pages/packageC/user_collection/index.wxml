@@ -1,0 +1,47 @@
+<view class="nav-wrap" style="height: {{height*2+20}}px;">
+    <view class="nav-title" style="line-height: {{height*2+44}}px;">{{nvabarData.title}}</view>
+    <view style="display: flex; justify-content: space-around;flex-direction: column;height:100%;">
+        <view class="nav-capsule" wx:if="{{nvabarData.showCapsule}}">
+            <view bindtap="_navback" wx:if="{{!share}}">
+                <image class="back-pre" mode="aspectFill" src="../../../style/icon/back.png"></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="item-box" style="margin-top:{{height*2+20}}px;">
+    <view class="items" wx:for="{{list}}" wx:key="index">
+        <view class="item">
+            <view bindtouchend="touchE" bindtouchmove="touchM" bindtouchstart="touchS" class="inner txt" data-index="{{index}}" style="{{item.txtStyle}};background-color:#ffffff;height:100%;">
+                <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
+                    <image class="coll_img" src="{{item.user_head_sculpture}}"></image>
+                    <view style="float:left;margin-left:10px;margin-top:15px;font-size:15px;">{{item.user_nick_name}}</view>
+                </navigator>
+                <view bindtap="cancel" data-key="{{index}}" style="float:right;margin-top:15px;" wx:if="{{uid!=item.user_id&&item.is_user==0}}">
+                    <view style="color:#ffffff;font-size:12px;background-color:#4982F6;padding:10rpx;width:60px;text-align:center;border-radius:3px;">+ 关注</view>
+                </view>
+                <view bindtap="cancel" data-key="{{index}}" style="float:right;margin-right:10px;margin-top:15px;" wx:if="{{uid!=item.user_id&&item.is_user==1}}">
+                    <view style="color:#ffffff;font-size:12px;background-color:#999999;padding:10rpx;width:60px;text-align:center;border-radius:3px;">取消关注</view>
+                </view>
+                <view style="clear:both;height:0"></view>
+                <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type={{item.study_type}}">
+                    <view style="height:60px;margin-top: 12px;">
+                        <image class="coll_img_arr" mode="aspectFill" src="{{item.image_part[0]}}" wx:if="{{item.image_part[0]}}"></image>
+                        <view class="text_num" style="line-height:27px;width:79%;"> {{item.study_title==''?item.study_content:item.study_title}}</view>
+                    </view>
+                </navigator>
+                <view style="clear:both;height:0"></view>
+                <view style="font-size:12px;margin-top:10px;color:#9A9A9A;" wx:if="{{item.whether_delete==0}}">已有{{item.study_repount}}人回复了</view>
+                <view style="font-size:12px;margin-top:10px;color:#9A9A9A;" wx:if="{{item.whether_delete==1}}">该信息已被删除</view>
+            </view>
+            <view bindtap="delItem" class="inner del" data-index="{{index}}">删除</view>
+        </view>
+        <view style="height:5px;width:100%;background-color:#F4F4F4"></view>
+    </view>
+</view>
+<i-toast id="toast"></i-toast>
+<view class="classify" style="left:35%;" wx:if="{{list.length==0}}">
+    <view class="class_border" style="border:0rpx;">
+        <image class="class_img" src="../../../style/icon/zanwu.png"></image>
+    </view>
+    <view style="font-size:14px;margin-top:5px;">没有收藏内容</view>
+</view>

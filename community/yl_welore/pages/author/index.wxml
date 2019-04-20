@@ -1,0 +1,14 @@
+<view class="page">
+    <view class="wx_user_login_box">
+        <view class="wx_user_face" style="">
+            <icon size="93" type="info"></icon>
+        </view>
+        <view class="wx_user_face" style="width:100%">
+            <text style="font-size:48rpx;color:#1296db">微信授权</text>
+        </view>
+        <view class="wx_login_info">
+            <text style="font-size:28rpx;color:#999999">此应用需要您的授权，我们不会窃取您的个人信息</text>
+        </view>
+        <button bindgetuserinfo="onGotUserInfo" class="wx_user_login" lang="zh_CN" openType="getUserInfo" style="width:400rpx;">点击授权</button>
+    </view>
+</view>

@@ -1,0 +1,149 @@
+.nav-wrap {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #fff;
+    color: #000;
+    z-index: 9999999;
+}
+
+.nav-title {
+    position: absolute;
+    text-align: center;
+    max-width: 377rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 36rpx;
+    color: #2c2b2b;
+    font-weight: 600;
+}
+
+.nav-capsule {
+    display: flex;
+    align-items: center;
+    margin-left: 20rpx;
+    width: 50rpx;
+    justify-content: space-around;
+    border-radius: 50%;
+    margin-top: 54rpx;
+    z-index: 999999999;
+}
+
+.navbar-v-line {
+    width: 1px;
+    height: 32rpx;
+    background-color: #F3F3F3;
+}
+
+.back-pre {
+    width: 35px;
+    margin-top: 11rpx;
+    margin-left: 10px;
+}
+
+page {
+    background: #fff;
+}
+
+.tag_tag {
+    vertical-align: text-top;
+    margin-left: 15rpx;
+}
+
+.classify_list {
+    display: flex;
+    font-size: 15px;
+    width: 100%;
+    white-space: nowrap;
+    background-color: #fff;
+    overflow-x: scroll;
+}
+
+.classify {
+    height: 100%;
+    margin: 25rpx;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 25rpx;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+
+.classify_nex {
+    margin: 25rpx;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 25rpx;
+    display: inline-block;
+}
+
+.class_img {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 100%;
+}
+
+.chang_img {
+    min-width: 288rpx;
+    height: 150rpx;
+    border-radius: 25rpx;
+}
+
+.class_border {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 100%;
+    border: 2rpx #dbdbdb solid;
+    padding: 5rpx;
+    margin: 0 auto;
+}
+
+.bod_qu {
+    height: 46rpx;
+    border-radius: 34rpx;
+    background-color: #f8f8f8;
+    color: #2e77ed;
+    font-size: 24rpx;
+    font-weight: 600;
+    line-height: 47rpx;
+    width: 60px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.demo-col {
+    border: solid;
+    line-height: 90rpx;
+}
+
+.placeholder {
+    margin: 5px;
+}
+
+.img-style {
+    height: 0rpx;
+    width: 0rpx;
+    position: absolute;
+    right: 50%;
+    opacity: 0;
+    bottom: 0px;
+}
+
+.weui-tabbar_boo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    border-top-left-radius: 30rpx;
+    border-top-right-radius: 30rpx;
+}
