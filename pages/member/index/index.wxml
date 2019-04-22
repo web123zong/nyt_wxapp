@@ -95,20 +95,20 @@
             </view>
         </view>
         <view class="fui-cell-group fui-cell-click" openType="navigate">
-            <navigator class="fui-cell" hoverClass="none" url="/pages/member/membercard/index" wx:if="{{member.usemembercard}}">
+            <!-- <navigator class="fui-cell" hoverClass="none" url="/pages/member/membercard/index" wx:if="{{member.usemembercard}}">
                 <view class="fui-cell-icon">
                     <text class="icox icox-bargain"></text>
                 </view>
                 <view class="fui-cell-text">我的会员卡</view>
                 <view class="fui-cell-remark"></view>
-            </navigator>
-            <navigator class="fui-cell" hoverClass="none" url="/pages/bargain/index/index" wx:if="{{member.bargain}}">
+            </navigator> -->
+            <!-- <navigator class="fui-cell" hoverClass="none" url="/pages/bargain/index/index" wx:if="{{member.bargain}}">
                 <view class="fui-cell-icon">
                     <text class="icox icox-bargain"></text>
                 </view>
                 <view class="fui-cell-text">砍价首页</view>
                 <view class="fui-cell-remark"></view>
-            </navigator>
+            </navigator> -->
             <navigator class="fui-cell" hoverClass="none" url="/pages/web/index?module=sign&domain={{member.sign_url_domain}}&params={{member.sign_url_params}}&mid={{member.id}}" wx:if="{{member.hassign}}">
                 <view class="fui-cell-icon">
                     <text class="icox icox-qiandao"></text>
@@ -198,13 +198,13 @@
                 <view class="fui-cell-text">我的足迹</view>
                 <view class="fui-cell-remark"></view>
             </navigator>
-            <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/commission/return/index" wx:if="{{member.hasFullback}}">
+            <!-- <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/commission/return/index" wx:if="{{member.hasFullback}}">
                 <view class="fui-cell-icon">
                     <text class="icox icox-xiaofei1"></text>
                 </view>
                 <view class="fui-cell-text">我的{{member.fullbacktext}}</view>
                 <view class="fui-cell-remark"></view>
-            </navigator>
+            </navigator> -->
         </view>
         <view class="fui-cell-group fui-cell-click">
             <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/member/withdraw/index" wx:if="{{member.open_withdraw}}">
