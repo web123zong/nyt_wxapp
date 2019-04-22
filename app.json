@@ -198,7 +198,11 @@
             }
         ]
     },
-
+    "permission": {
+		"scope.userLocation": {
+			"desc": "用于小程序位置接口的效果展示"
+		}
+	},
     "navigateToMiniProgramAppIdList": [],
     "debug": false
 }
