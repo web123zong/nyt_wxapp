@@ -67,7 +67,7 @@
                 <view class="fui-cell-text">我的订单</view>
                 <view class="fui-cell-remark">查看全部订单</view>
             </navigator>
-            <view class="fui-icon-group col-{{iscycelbuy?5:4}} nomargin">
+            <view class="fui-icon-group col-4 nomargin">
                 <navigator class="fui-icon-col" hoverClass="none" openType="navigate" url="/pages/order/index?status=0">
                     <view class="badge" wx:if="{{member.statics.order_0>0}}">{{member.statics.order_0}}</view>
                     <text class="icox icox-payment"></text>
@@ -88,20 +88,20 @@
                     <text class="icox icox-return"></text>
                     <view class="text">退换货</view>
                 </navigator>
-                <navigator class="fui-icon-col cycle" hoverClass="none" openType="navigate" url="/pages/order/cycle/order?iscycelbuy=1" wx:if="{{iscycelbuy}}">
+                <!-- <navigator class="fui-icon-col cycle" hoverClass="none" openType="navigate" url="/pages/order/cycle/order?iscycelbuy=1" wx:if="{{iscycelbuy}}">
                     <text class="icox icox-xiangmuzhouqi" style="color: #ff6a54;"></text>
                     <view class="text">周期购</view>
-                </navigator>
+                </navigator> -->
             </view>
         </view>
         <view class="fui-cell-group fui-cell-click" openType="navigate">
-            <!-- <navigator class="fui-cell" hoverClass="none" url="/pages/member/membercard/index" wx:if="{{member.usemembercard}}">
+            <navigator class="fui-cell" hoverClass="none" url="/pages/member/course/index" wx:if="{{member.usemembercard}}">
                 <view class="fui-cell-icon">
                     <text class="icox icox-bargain"></text>
                 </view>
-                <view class="fui-cell-text">我的会员卡</view>
+                <view class="fui-cell-text">我的课程</view>
                 <view class="fui-cell-remark"></view>
-            </navigator> -->
+            </navigator>
             <!-- <navigator class="fui-cell" hoverClass="none" url="/pages/bargain/index/index" wx:if="{{member.bargain}}">
                 <view class="fui-cell-icon">
                     <text class="icox icox-bargain"></text>
