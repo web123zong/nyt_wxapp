@@ -1,29 +1,59 @@
-<!--pages/member/course/index.wxml-->
-<!-- <text>pages/member/course/index.wxml</text> -->
-<view>
+<loading wx:if="{{!show}}">加载中...</loading>
+<view wx:if="{{show}}">
   <view class='page-title'>
     <view class='title'>报名记录</view>
   </view>
-  <view class='lab'></view>
-  <view class='tip'>课程</view>
-  <view class='clean'></view>
-  <view class='course'>
-    <view class='course-left'>
-      <view class='course-title'>
-        php从入门到秃头
+  <block wx:if="{{list.length > 0}}">
+    <view class='clean flex flex-y-center'>
+      <view class='lab'></view>
+      <view class='tip'>课程</view>
+    </view>
+    <!-- 课程列表 -->
+    <view class='course-content'>
+
+      <view class='course flex flex-x-center'>
+        <view class='course-right'>
+          <view class='img-view'>
+            <image class='course-img' src='https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640'></image>
+          </view>
+        </view>
+        <view class='course-left flex flex-col'>
+          <view class='course-title'>
+            php从入门到秃头php从入门到秃头php从入门到秃头php从入门到秃头
+          </view>
+          <view class='bar'>
+            <progress percent="80" show-info font-size="14" active="true" />
+          </view>
+          <view class='btn-view'>
+            <button class='li-btn'>点击打卡</button>
+          </view>
+        </view>
       </view>
 
-      <view class='bar'>
-        <progress percent="20" />
+      <view class='course flex flex-x-center'>
+        <view class='course-right'>
+          <view class='img-view'>
+            <image class='course-img' src='https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'></image>
+          </view>
+        </view>
+        <view class='course-left flex flex-col'>
+          <view class='course-title'>
+            php从入门到秃头php从入门到秃头php从入门到秃头php从入门到秃头
+          </view>
+          <view class='bar'>
+            <progress percent="80" show-info font-size="14" active="true" />
+          </view>
+          <view class='btn-view'>
+            <button class='li-btn'>点击打卡</button>
+          </view>
+        </view>
       </view>
-    </view>
 
-    <view class='course-right'>
-      <image class='course-img' src=''></image>
-      <button class='btn1' open-type='openSetting'>
-        <image class='btnImg' src='../../images/wechat.png'></image>
-        <view>点击打卡</view>
-      </button>
     </view>
+  </block>
+  <!-- 没有数据 -->
+  <view class="fui-loading empty" wx:if="{{list.length == 0}}">
+    <view class="text">没有数据</view>
   </view>
+
 </view>

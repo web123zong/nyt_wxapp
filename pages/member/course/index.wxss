@@ -1,97 +1,91 @@
-/* pages/member/course/index.wxss */
-
 .page-title {
   width: 100%;
-  height: 65rpx;
   background-color: #fff;
-  font-size: 20rpx;
-  line-height: 30rpx;
 }
 
 .title {
-  margin-left: 20rpx;
-  font-size: 40rpx;
-  line-height: 65rpx;
+  padding: 20rpx;
+  font-size: 33rpx;
 }
 
 .lab {
-  width: 10rpx;
-  height: 30rpx;
+  width: 7rpx;
+  height: 33rpx;
   background-color: #fd5454;
-  float: left;
-  margin: 15rpx 0 0 20rpx;
 }
 
 .tip {
-  float: left;
-  margin: 15rpx 0 0 10rpx;
-  line-height: 31rpx;
+  font-size: 33rpx;
+  margin-left: 15rpx;
 }
 
 .clean {
-  margin-top: 70rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  padding: 20rpx;
+}
+
+.course-content {
+  width: 100%;
 }
 
 .course {
   width: 100%;
-  height: 250rpx;
   background-color: #fff;
+  border-top: 1px solid #e2e2e2;
+  padding: 25rpx 15rpx;
+}
+
+view {
+  box-sizing: border-box;
 }
 
 .course-title {
-  margin-top: 30rpx;
-  margin-left: 20rpx;
-  float: left;
+  font-size: 31rpx;
+  height: 100rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.img-view {
+  border-radius: 8rpx;
+  width: 100%;
+  height: 200rpx;
+  overflow: hidden;
 }
 
 .course-img {
-  border:1rpx solid #000;
-  border-radius:20rpx;
-  width:90%;
-  height:55%;
-  margin:15rpx 15rpx 0 0;
-
-}
-
-.progress {
-  float: left;
-  height: 100rpx;
+  border-radius: 8rpx;
+  width: 100%;
+  min-height: 200rpx;
 }
 
 .course-left {
-  float: left;
-  width: 55%;
+  width: 50%;
+  padding: 0 10rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.bar {
-  margin-top: 200rpx;
-  margin-left: 20rpx;
-}
-.course-right{
-  float: right;
-  width: 40%;
-  height: 100%;
-}
-.btn1 {
-  width: 95%;
-  margin-top: 9rpx;
-  background-color: burlywood;
-  color: white;
-  border-radius: 98rpx;
-  flex-direction: row;
-  align-items: center;
-  height:30%;
-  display: flex;
-  margin-right: 20rpx;
+.course-right {
+  width: 50%;
+  padding: 0 10rpx;
 }
 
-.btnImg {
-  margin-right: 8rpx;
-  width: 46rpx;
-  height: 46rpx;
+.btn-view {
+  text-align: right;
 }
 
-.btn1::after {
-  border-radius: 98rpx;
-  border: 0; 
+.li-btn {
+  background-color: #fd5454;
+  color: #fff;
+  border-radius: 8rpx;
+  font-size: 27rpx;
 }
