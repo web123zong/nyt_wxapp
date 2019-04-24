@@ -190,6 +190,18 @@ App({
 		// this.api_root = t[0] + "addons/yl_welore/web/index.php?s=/api/", this.http_root = t[0];
     this.api_root = "https://nyt.gzchujiao.com/addons/yl_welore/web/index.php?s=/api/";
 	},
+  setCachecommu: function (t, e, o) {
+    var n = +new Date() / 1e3, i = !0, a = {
+      expire: o ? n + parseInt(o) : 0,
+      value: e
+    };
+    try {
+      wx.setStorageSync(t + this.globalData.appid, a);
+    } catch (t) {
+      i = !1;
+    }
+    return i;
+  },
   getCachecommu: function (t, e) {
     var o = +new Date() / 1e3, n = "";
     o = parseInt(o);
@@ -202,7 +214,7 @@ App({
     return n || "";
   },
   check_user_status: function () {
-    var t = this.api_root + "User/get_user_status", e = this.getCachecommu("userinfo");
+    var t = this.api_root + "User/get_user_status", e = this.getCachecommu("userinfocom");
     if (!e) return !1;
     var o = new Object();
     o.token = e.token, o.openid = e.openid, o.much_id = this.siteInfo.uniacid, o.uid = e.uid,
@@ -225,10 +237,44 @@ App({
       });
   },
   check_user_login: function () {
-    this.getCachecommu("userinfo") ? (this.authority(), this.get_forward(), this.check_user_status(),
+    this.getCachecommu("userinfocom") ? (this.authority(), this.get_forward(), this.check_user_status(),
       this.get_design()) : wx.navigateTo({
         url: "/community/yl_welore/pages/author/index"
       });
+  },
+  get_design: function () {
+    var t = this.api_root + "User/get_diy", e = this, o = e.getCachecommu("userinfocom"), n = new Object();
+    n.token = o.token, n.openid = o.openid, n.much_id = this.siteInfo.uniacid, http.POST(t, {
+      params: n,
+      success: function (t) {
+        console.log(t), e.globalData.design = t.data;
+      },
+      fail: function () {
+        wx.showModal({
+          title: "提示",
+          content: "网络繁忙，请稍候重试！",
+          showCancel: !1,
+          success: function (t) { }
+        });
+      }
+    });
+  },
+  get_forward: function () {
+    var t = this.api_root + "User/get_forward", e = this, o = this.getCachecommu("userinfocom"), n = new Object();
+    n.token = o.token, n.openid = o.openid, n.much_id = this.siteInfo.uniacid, http.POST(t, {
+      params: n,
+      success: function (t) {
+        1 == t.data.whether_open ? e.globalData.forward = t.data : e.globalData.forward = "";
+      },
+      fail: function () {
+        wx.showModal({
+          title: "提示",
+          content: "网络繁忙，请稍候重试！",
+          showCancel: !1,
+          success: function (t) { }
+        });
+      }
+    });
   },
   get_book: function () {
     var t = this.api_root + "User/book", e = new Object();
@@ -249,8 +295,25 @@ App({
       }
     });
   },
+  authority: function () {
+    var t = this.api_root + "User/get_authority", e = this, o = this.getCachecommu("userinfocom"), n = new Object();
+    n.token = o.token, n.openid = o.openid, n.much_id = this.siteInfo.uniacid, http.POST(t, {
+      params: n,
+      success: function (t) {
+        console.log(t), e.globalData.copyright = t.data;
+      },
+      fail: function () {
+        wx.showModal({
+          title: "提示",
+          content: "网络繁忙，请稍候重试！",
+          showCancel: !1,
+          success: function (t) { }
+        });
+      }
+    });
+  },
   getUserInfo: function (i, a) {
-    var s = this, c = "", r = "", t = s.getCache("userinfo");
+    var s = this, c = "", r = "", t = s.getCachecommu("userinfocom");
     t ? a && "function" == typeof a && a(t) : wx.login({
       success: function (t) {
         if (t.code) {
@@ -285,7 +348,7 @@ App({
               e.wx_openid = c, e.userInfo = i, e.uniacid = s.siteInfo.uniacid, http.POST(s.api_root + "Login/do_login", {
                 params: e,
                 success: function (t) {
-                  i.openid = c, i.token = t.data.token, i.uid = t.data.id, i.sessionKey = r, s.setCache("userinfo", i),
+                  i.openid = c, i.token = t.data.token, i.uid = t.data.id, i.sessionKey = r, s.setCachecommu("userinfocom", i),
                     s.check_user_login(), a && "function" == typeof a && a(s.getCache("userinfo"));
                 },
                 fail: function () { }
