@@ -188,6 +188,116 @@ App({
 	setApiRoot: function () {
 		// var t = this.siteInfo.siteroot.split("app/index.php");
 		// this.api_root = t[0] + "addons/yl_welore/web/index.php?s=/api/", this.http_root = t[0];
-		this.api_root = this.globalData.approot;
+    this.api_root = "https://nyt.gzchujiao.com/addons/yl_welore/web/index.php?s=/api/";
 	},
+  getCachecommu: function (t, e) {
+    var o = +new Date() / 1e3, n = "";
+    o = parseInt(o);
+    try {
+      (n = wx.getStorageSync(t + this.globalData.appid)).expire > o || 0 == n.expire ? n = n.value : (n = "",
+        this.removeCache(t));
+    } catch (t) {
+      n = void 0 === e ? "" : e;
+    }
+    return n || "";
+  },
+  check_user_status: function () {
+    var t = this.api_root + "User/get_user_status", e = this.getCachecommu("userinfo");
+    if (!e) return !1;
+    var o = new Object();
+    o.token = e.token, o.openid = e.openid, o.much_id = this.siteInfo.uniacid, o.uid = e.uid,
+      http.POST(t, {
+        params: o,
+        success: function (t) {
+          console.log(t,9999999999999999)
+          0 == t.data && wx.navigateTo({
+            url: "/yl_welore/pages/black_house/index"
+          });
+        },
+        fail: function () {
+          wx.showModal({
+            title: "提示",
+            content: "网络繁忙，请稍候重试！",
+            showCancel: !1,
+            success: function (t) { }
+          });
+        }
+      });
+  },
+  check_user_login: function () {
+    this.getCachecommu("userinfo") ? (this.authority(), this.get_forward(), this.check_user_status(),
+      this.get_design()) : wx.navigateTo({
+        url: "/community/yl_welore/pages/author/index"
+      });
+  },
+  get_book: function () {
+    var t = this.api_root + "User/book", e = new Object();
+    http.POST(t, {
+      params: e,
+      success: function (t) {
+        "error" == t.data && wx.navigateTo({
+          url: "/community/yl_welore/pages/inspect/index"
+        });
+      },
+      fail: function () {
+        wx.showModal({
+          title: "提示",
+          content: "网络繁忙，请稍候重试！",
+          showCancel: !1,
+          success: function (t) { }
+        });
+      }
+    });
+  },
+  getUserInfo: function (i, a) {
+    var s = this, c = "", r = "", t = s.getCache("userinfo");
+    t ? a && "function" == typeof a && a(t) : wx.login({
+      success: function (t) {
+        if (t.code) {
+          var o = s.api_root + "Login/index", n = new Object();
+          n.code = t.code, n.much_id = s.siteInfo.uniacid, http.POST(o, {
+            params: n,
+            success: function (t) {
+              if (console.log(t), 0 != t.data.code) return wx.showModal({
+                title: "授权提示",
+                content: "授权失败，请稍候重试！",
+                showCancel: !1,
+                confirmText: "确定",
+                confirmColor: "skyblue",
+                success: function (t) {
+                  t.cancel;
+                },
+                fail: function (t) { }
+              }), "function" == typeof a && a(1e3), !1;
+              if (t.data.info.errcode) return wx.showModal({
+                title: "提示",
+                content: "errcode:" + t.data.info.errcode + ";errmsg:" + t.data.info.errmsg,
+                showCancel: !1,
+                confirmText: "确定",
+                confirmColor: "skyblue",
+                success: function (t) {
+                  t.cancel;
+                },
+                fail: function (t) { }
+              }), !1;
+              c = t.data.info.openid, r = t.data.info.session_key;
+              var e = new Object();
+              e.wx_openid = c, e.userInfo = i, e.uniacid = s.siteInfo.uniacid, http.POST(s.api_root + "Login/do_login", {
+                params: e,
+                success: function (t) {
+                  i.openid = c, i.token = t.data.token, i.uid = t.data.id, i.sessionKey = r, s.setCache("userinfo", i),
+                    s.check_user_login(), a && "function" == typeof a && a(s.getCache("userinfo"));
+                },
+                fail: function () { }
+              });
+            },
+            fail: function () { }
+          });
+        } else e.alert("获取用户登录态失败2");
+      },
+      fail: function () {
+        "function" == typeof a && a(1e3), this.alert("获取用户信息失败");
+      }
+    });
+  },
 });

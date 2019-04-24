@@ -232,6 +232,7 @@ Page({
         });
     },
     onShow: function() {
+        app.setApiRoot(), app.check_user_login(), app.get_book();
         app.check_user_status(), this.get_diy(), this.setData({
             isPopping: !1
         }), this.takeback(), console.log(this.data.diy), 0 != this.data.show && ($Toast({

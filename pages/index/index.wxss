@@ -1,7 +1,19 @@
 @import "../../__wuBaseWxss__/7.wxss";
 
 @import "../common/city-picker.wxss";
-
+.community{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  position: fixed;
+  right: 30rpx;
+  bottom: 20%;
+  border-radius: 50%;
+  z-index: 99999;
+}
 .advimg {
     width: 100%;
     height: 100%;
