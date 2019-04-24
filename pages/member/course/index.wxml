@@ -8,12 +8,22 @@
   <view class='tip'>课程</view>
   <view class='clean'></view>
   <view class='course'>
-    <view class='course-title'>
-      php从入门到秃头
-    <progress class='bar' percent="20" />
+    <view class='course-left'>
+      <view class='course-title'>
+        php从入门到秃头
+      </view>
+
+      <view class='bar'>
+        <progress percent="20" />
+      </view>
     </view>
-    <view class='course-img'>
-      
+
+    <view class='course-right'>
+      <image class='course-img' src=''></image>
+      <button class='btn1' open-type='openSetting'>
+        <image class='btnImg' src='../../images/wechat.png'></image>
+        <view>点击打卡</view>
+      </button>
     </view>
   </view>
 </view>

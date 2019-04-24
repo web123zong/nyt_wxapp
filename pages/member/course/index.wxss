@@ -1,50 +1,97 @@
 /* pages/member/course/index.wxss */
-.page-title{
+
+.page-title {
   width: 100%;
   height: 65rpx;
   background-color: #fff;
   font-size: 20rpx;
   line-height: 30rpx;
 }
-.title{
+
+.title {
   margin-left: 20rpx;
   font-size: 40rpx;
-  line-height: 65rpx
+  line-height: 65rpx;
 }
-.lab{
+
+.lab {
   width: 10rpx;
   height: 30rpx;
   background-color: #fd5454;
   float: left;
   margin: 15rpx 0 0 20rpx;
 }
-.tip{
+
+.tip {
   float: left;
   margin: 15rpx 0 0 10rpx;
   line-height: 31rpx;
 }
-.clean{
+
+.clean {
   margin-top: 70rpx;
 }
-.course{
+
+.course {
   width: 100%;
   height: 250rpx;
   background-color: #fff;
 }
-.course-title{
+
+.course-title {
   margin-top: 30rpx;
   margin-left: 20rpx;
-  float:left;
+  float: left;
 }
-.course-img{
-  border: 1rpx solid #000;
-  border-radius: 20rpx;
-  float: right;
-  width: 35%;
-  height: 80%;
-  margin: 25rpx 40rpx 0 0;
+
+.course-img {
+  border:1rpx solid #000;
+  border-radius:20rpx;
+  width:90%;
+  height:55%;
+  margin:15rpx 15rpx 0 0;
+
 }
-.progress{
+
+.progress {
   float: left;
   height: 100rpx;
+}
+
+.course-left {
+  float: left;
+  width: 55%;
+}
+
+.bar {
+  margin-top: 200rpx;
+  margin-left: 20rpx;
+}
+.course-right{
+  float: right;
+  width: 40%;
+  height: 100%;
+}
+.btn1 {
+  width: 95%;
+  margin-top: 9rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  flex-direction: row;
+  align-items: center;
+  height:30%;
+  display: flex;
+  margin-right: 20rpx;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
 }
