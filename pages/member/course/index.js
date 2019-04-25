@@ -57,8 +57,8 @@ Page({
       success(res) {
         latitude = res.latitude;
         longitude = res.longitude;
-        // distance = t.calculateDistance(26,116,26,116);
-        distance = t.calculateDistance(lat, lng, latitude, longitude);
+        distance = t.calculateDistance(26,116,26,116);
+        // distance = t.calculateDistance(lat, lng, latitude, longitude);
         if(distance < 100){
           e.get("shop/clock_in", { type: 1, mark: mark}, function (e) {
             wx.showModal({

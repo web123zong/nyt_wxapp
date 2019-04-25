@@ -317,6 +317,7 @@ App({
     t ? a && "function" == typeof a && a(t) : wx.login({
       success: function (t) {
         if (t.code) {
+          
           var o = s.api_root + "Login/index", n = new Object();
           n.code = t.code, n.much_id = s.siteInfo.uniacid, http.POST(o, {
             params: n,
