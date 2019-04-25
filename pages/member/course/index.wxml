@@ -25,7 +25,7 @@
             <progress percent="{{item.info.bili}}" show-info font-size="14" active="true" />
           </view>
           <view class='btn-view'>
-            <button class='li-btn' data-id="{{item.id}}" data-lnl="{{item.lnl}}" bindtap='clockin'>点击打卡</button>
+            <button class='li-btn' data-mark="{{item.mark}}" data-lnl="{{item.lnl}}" bindtap='clockin'>点击打卡</button>
           </view>
         </view>
       </view>

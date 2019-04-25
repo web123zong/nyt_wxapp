@@ -46,31 +46,34 @@ Page({
     return s
   },
   // 点击打卡
-  clockin: function(e) {
+  clockin: function(es) {
     var t = this; 
-    var id = e.currentTarget.dataset.id,
-      lat = parseFloat(e.currentTarget.dataset.lnl.lat),
-      lng = parseFloat(e.currentTarget.dataset.lnl.lng),
+    var mark = es.currentTarget.dataset.mark,
+      lat = parseFloat(es.currentTarget.dataset.lnl.lat),
+      lng = parseFloat(es.currentTarget.dataset.lnl.lng),
       latitude, longitude,distance;
     wx.getLocation({
       type: 'wgs84',
       success(res) {
         latitude = res.latitude;
         longitude = res.longitude;
-        distance = t.calculateDistance(lat, lng,latitude,longitude);
+        // distance = t.calculateDistance(26,116,26,116);
+        distance = t.calculateDistance(lat, lng, latitude, longitude);
         if(distance < 100){
-         wx.showModal({
-           title: '提示',
-           content: '打卡成功',
-           showCancel:false,
-           success(res) {
-             if (res.confirm) {
-               
-             } else if (res.cancel) {
-               
-             }
-           }
-         })
+          e.get("shop/clock_in", { type: 1, mark: mark}, function (e) {
+            wx.showModal({
+              title: '提示',
+              content: '打卡成功',
+              showCancel: false,
+              success(res) {
+                if (res.confirm) {
+
+                } else if (res.cancel) {
+
+                }
+              }
+            })
+          }); 
         }else{
           wx.showModal({
             title: '提示',
