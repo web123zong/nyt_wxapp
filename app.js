@@ -214,7 +214,7 @@ App({
     return n || "";
   },
   check_user_status: function () {
-    var t = this.api_root + "User/get_user_status", e = this.getCachecommu("userinfocom");
+    var t = this.api_root + "User/get_user_status", e = this.getCachecommu("userinfo");
     if (!e) return !1;
     var o = new Object();
     o.token = e.token, o.openid = e.openid, o.much_id = this.siteInfo.uniacid, o.uid = e.uid,
@@ -237,13 +237,13 @@ App({
       });
   },
   check_user_login: function () {
-    this.getCachecommu("userinfocom") ? (this.authority(), this.get_forward(), this.check_user_status(),
+    this.getCachecommu("userinfo") ? (this.authority(), this.get_forward(), this.check_user_status(),
       this.get_design()) : wx.navigateTo({
         url: "/community/yl_welore/pages/author/index"
       });
   },
   get_design: function () {
-    var t = this.api_root + "User/get_diy", e = this, o = e.getCachecommu("userinfocom"), n = new Object();
+    var t = this.api_root + "User/get_diy", e = this, o = e.getCachecommu("userinfo"), n = new Object();
     n.token = o.token, n.openid = o.openid, n.much_id = this.siteInfo.uniacid, http.POST(t, {
       params: n,
       success: function (t) {
@@ -260,7 +260,7 @@ App({
     });
   },
   get_forward: function () {
-    var t = this.api_root + "User/get_forward", e = this, o = this.getCachecommu("userinfocom"), n = new Object();
+    var t = this.api_root + "User/get_forward", e = this, o = this.getCachecommu("userinfo"), n = new Object();
     n.token = o.token, n.openid = o.openid, n.much_id = this.siteInfo.uniacid, http.POST(t, {
       params: n,
       success: function (t) {
@@ -296,7 +296,7 @@ App({
     });
   },
   authority: function () {
-    var t = this.api_root + "User/get_authority", e = this, o = this.getCachecommu("userinfocom"), n = new Object();
+    var t = this.api_root + "User/get_authority", e = this, o = this.getCachecommu("userinfo"), n = new Object();
     n.token = o.token, n.openid = o.openid, n.much_id = this.siteInfo.uniacid, http.POST(t, {
       params: n,
       success: function (t) {
@@ -313,7 +313,7 @@ App({
     });
   },
   getUserInfo: function (i, a) {
-    var s = this, c = "", r = "", t = s.getCachecommu("userinfocom");
+    var s = this, c = "", r = "", t = s.getCachecommu("userinfo");
     t ? a && "function" == typeof a && a(t) : wx.login({
       success: function (t) {
         if (t.code) {
@@ -348,7 +348,7 @@ App({
               e.wx_openid = c, e.userInfo = i, e.uniacid = s.siteInfo.uniacid, http.POST(s.api_root + "Login/do_login", {
                 params: e,
                 success: function (t) {
-                  i.openid = c, i.token = t.data.token, i.uid = t.data.id, i.sessionKey = r, s.setCachecommu("userinfocom", i),
+                  i.openid = c, i.token = t.data.token, i.uid = t.data.id, i.sessionKey = r, s.setCachecommu("userinfo", i),
                     s.check_user_login(), a && "function" == typeof a && a(s.getCache("userinfo"));
                 },
                 fail: function () { }
