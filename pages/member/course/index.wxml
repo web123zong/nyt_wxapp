@@ -3,34 +3,34 @@
   <view class='page-title'>
     <view class='title'>报名记录</view>
   </view>
-  <block wx:if="{{list.length > 0}}">
     <view class='clean flex flex-y-center'>
       <view class='lab'></view>
       <view class='tip'>课程</view>
     </view>
     <!-- 课程列表 -->
+    <block wx:if="{{list.goodsinfo.length > 0}}">
     <view class='course-content'>
-
+      <block wx:for="{{list.goodsinfo}}">
       <view class='course flex flex-x-center'>
         <view class='course-right'>
           <view class='img-view'>
-            <image class='course-img' src='https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640'></image>
+            <image class='course-img' src='{{item.thumb}}'></image>
           </view>
         </view>
         <view class='course-left flex flex-col'>
           <view class='course-title'>
-            php从入门到秃头php从入门到秃头php从入门到秃头php从入门到秃头
+            {{item.title}}
           </view>
           <view class='bar'>
-            <progress percent="80" show-info font-size="14" active="true" />
+            <progress percent="{{item.info.bili}}" show-info font-size="14" active="true" />
           </view>
           <view class='btn-view'>
             <button class='li-btn'>点击打卡</button>
           </view>
         </view>
       </view>
-
-      <view class='course flex flex-x-center'>
+      </block>
+      <!-- <view class='course flex flex-x-center'>
         <view class='course-right'>
           <view class='img-view'>
             <image class='course-img' src='https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'></image>
@@ -47,7 +47,7 @@
             <button class='li-btn'>点击打卡</button>
           </view>
         </view>
-      </view>
+      </view> -->
 
     </view>
   </block>

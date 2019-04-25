@@ -19,7 +19,7 @@ Page({
   },
   getList: function () {
     var t = this;
-    e.get("member/address/get_list", {}, function (e) {
+    e.get("shop/get_my_course", {}, function (e) {
 
       t.setData({
         list: e.list,

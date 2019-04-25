@@ -116,11 +116,12 @@
                 <view class="fui-cell-text">{{member.sign_text}}</view>
                 <view class="fui-cell-remark"></view>
             </navigator>
-            <navigator class="fui-cell" hoverClass="none" url="{{member.commission_url}}" wx:if="{{member.commission}}">
+            <navigator class="fui-cell" hoverClass="none" url="/pages/commission/poster/index" wx:if="{{member.commission}}">
+            <!-- {{member.commission_url}} -->
                 <view class="fui-cell-icon">
                     <text class="icox icox-distribution"></text>
                 </view>
-                <view class="fui-cell-text">{{member.commission_text}}</view>
+                <view class="fui-cell-text">推荐海报</view>
                 <view class="fui-cell-remark"></view>
             </navigator>
         </view>
