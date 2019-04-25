@@ -13,7 +13,6 @@ Page({
   },
   onShow: function() {
     this.getList();
-
   },
   onPullDownRefresh: function() {
     wx.stopPullDownRefresh();
@@ -60,19 +59,33 @@ Page({
         distance = t.calculateDistance(26,116,26,116);
         // distance = t.calculateDistance(lat, lng, latitude, longitude);
         if(distance < 100){
-          e.get("shop/clock_in", { type: 1, mark: mark}, function (e) {
-            wx.showModal({
-              title: '提示',
-              content: '打卡成功',
-              showCancel: false,
-              success(res) {
-                if (res.confirm) {
-
-                } else if (res.cancel) {
-
+          e.get("shop/clock_in", { type: 1, mark: mark}, function (result) {
+            if (result.result == 1){
+              wx.showModal({
+                title: '提示',
+                content: '打卡成功,获得积分' + result.credit1,
+                showCancel: false,
+                success(res) {
+                  if (res.confirm) {
+                    t.getList();
+                  }
                 }
-              }
-            })
+              })
+            } else if (result.result == 2){
+              wx.showModal({
+                title: '提示',
+                content: '今天已经打卡成功',
+                showCancel: false,
+                success(res) {}
+              })
+            }else{
+              wx.showModal({
+                title: '提示',
+                content: '打卡失败，请重新打卡',
+                showCancel: false,
+                success(res) { }
+              })
+            }
           }); 
         }else{
           wx.showModal({
@@ -80,11 +93,7 @@ Page({
             content: '未进入打卡区域',
             showCancel: false,
             success(res) {
-              if (res.confirm) {
-
-              } else if (res.cancel) {
-                
-              }
+              if (res.confirm) {} 
             }
           })
         }

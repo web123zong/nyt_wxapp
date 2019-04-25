@@ -77,12 +77,6 @@
     "pages/transfer/bargain/index",
     "pages/transfer/seckill/index",
     "pages/quickbuy/index",
-    "pages/bargain/index/index",
-    "pages/bargain/detail/detail",
-    "pages/bargain/rule/rule",
-    "pages/bargain/act/act",
-    "pages/bargain/bargain/bargain",
-    "pages/bargain/purchase/purchase",
     "seckill/pages/index/index",
     "dividend/pages/index/index",
     "dividend/pages/down/index",
@@ -157,8 +151,18 @@
         "yl_welore/pages/packageC/withdrawal/index",
         "yl_welore/pages/packageC/withdrawal_list/index",
         "yl_welore/pages/packageC/user_invitation/index"
-      ],
-      "independent": true
+      ]
+    },
+    {
+      "root":"bargain",
+      "pages":[
+        "index/index",
+        "detail/detail",
+        "rule/rule",
+        "act/act",
+        "bargain/bargain",
+        "purchase/purchase"
+      ]
     }
   ],
   "window": {
