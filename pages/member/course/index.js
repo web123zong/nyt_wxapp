@@ -13,7 +13,6 @@ Page({
   },
   onShow: function() {
     this.getList();
-
   },
   onPullDownRefresh: function() {
     wx.stopPullDownRefresh();

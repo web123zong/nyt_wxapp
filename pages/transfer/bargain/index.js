@@ -15,7 +15,7 @@ Page({
         setTimeout(function() {
             n.onPullDownRefresh();
         }, 300), wx.reLaunch({
-            url: "/pages/bargain/index/index"
+            url: "/bargain/index/index"
         });
     },
     onShow: function() {},
