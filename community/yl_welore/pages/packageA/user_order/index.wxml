@@ -26,7 +26,7 @@
     </view>
     <view style="padding:5px;">
         <view style="background-color:#fff;border-radius:15px;min-height:100px;padding:10px;margin:10px;" wx:for="{{my_list}}" wx:key="m_key">
-            <navigator hoverClass="none" url="/yl_welore/pages/packageA/good_info/index?id={{item.product_id}}">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/good_info/index?id={{item.product_id}}">
                 <image mode="aspectFit" src="{{item.product_img}}" style="width:5em;height:5em;margin:15px 10px;float:left;"></image>
                 <view class="course-name" style="float:left;margin-top:26px;width:65%;">{{item.product_name}}</view>
                 <view style="margin-top:10px;float:left;font-size:12px;color:#999999;width:65%;">
@@ -42,7 +42,7 @@
                 <view bindtap="ok_mod" data-id="{{item.id}}" style="float:right;border:1px solid #FF783C;color:#FF783C;width:78px;text-align:center;border-radius:40px;font-size:12px;padding:5px 5px;" wx:if="{{item.status==1}}">确认收货</view>
                 <view bindtap="refund_mod" data-id="{{item.id}}" style="float:right;border:1px solid #CC3333;color:#CC3333;margin:0 10px;width:78px;text-align:center;border-radius:40px;font-size:12px;padding:5px 5px;" wx:if="{{item.refund_count==0&&item.status!=3&&item.status!=4}}">申请退款</view>
                 <view bindtap="refund_del" data-id="{{item.id}}" style="float:right;border:1px solid #CC3333;color:#CC3333;margin:0 10px;width:78px;text-align:center;border-radius:40px;font-size:12px;padding:5px 5px;" wx:if="{{item.status==2}}">取消退款</view>
-                <navigator url="/yl_welore/pages/packageA/order_info/index?id={{item.id}}">
+                <navigator url="/community/yl_welore/pages/packageA/order_info/index?id={{item.id}}">
                     <view style="float:right;border:1px solid #999;width:78px;text-align:center;border-radius:40px;font-size:12px;padding:5px 5px;">查看详情</view>
                 </navigator>
             </view>

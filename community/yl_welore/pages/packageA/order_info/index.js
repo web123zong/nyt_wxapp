@@ -53,7 +53,7 @@ Page({
         1 != t.length ? (a.setData({
             show: !1
         }), wx.navigateBack()) : wx.reLaunch({
-            url: "/yl_welore/pages/index/index"
+            url: "/community/yl_welore/pages/index/index"
         });
     }
 });

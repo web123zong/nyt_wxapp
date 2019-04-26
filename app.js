@@ -170,7 +170,7 @@ App({
         params: o,
         success: function(t) {
           0 == t.data && wx.navigateTo({
-            url: "/yl_welore/pages/black_house/index"
+            url: "/community/yl_welore/pages/black_house/index"
           });
         },
         fail: function() {
@@ -221,9 +221,8 @@ App({
       http.POST(t, {
         params: o,
         success: function (t) {
-          console.log(t,9999999999999999)
           0 == t.data && wx.navigateTo({
-            url: "/yl_welore/pages/black_house/index"
+            url: "/community/yl_welore/pages/black_house/index"
           });
         },
         fail: function () {
@@ -239,7 +238,7 @@ App({
   check_user_login: function () {
     this.getCachecommu("userinfo") ? (this.authority(), this.get_forward(), this.check_user_status(),
       this.get_design()) : wx.navigateTo({
-        url: "/community/yl_welore/pages/author/index"
+        url: "/community/community/yl_welore/pages/author/index"
       });
   },
   get_design: function () {
@@ -282,7 +281,7 @@ App({
       params: e,
       success: function (t) {
         "error" == t.data && wx.navigateTo({
-          url: "/community/yl_welore/pages/inspect/index"
+          url: "/community/community/yl_welore/pages/inspect/index"
         });
       },
       fail: function () {
@@ -346,9 +345,10 @@ App({
               }), !1;
               c = t.data.info.openid, r = t.data.info.session_key;
               var e = new Object();
-              e.wx_openid = c, e.userInfo = i, e.uniacid = s.siteInfo.uniacid, http.POST(s.api_root + "Login/do_login", {
+              e.wx_openid = c, e.userInfo = i, e.uniacid = s.siteInfo.uniacid, console.log(e,6363), http.POST(s.api_root + "Login/do_login", {
                 params: e,
                 success: function (t) {
+                  
                   i.openid = c, i.token = t.data.token, i.uid = t.data.id, i.sessionKey = r, s.setCachecommu("userinfo", i),
                     s.check_user_login(), a && "function" == typeof a && a(s.getCache("userinfo"));
                 },

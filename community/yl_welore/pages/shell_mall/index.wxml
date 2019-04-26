@@ -16,7 +16,7 @@
     <view class="weui-tab__panel" style="padding-top:10px;min-height:37em;margin-bottom:50px;">
         <block wx:for="{{shop_list}}" wx:key="s_key">
             <view style="margin:20px;width:90%;height:100%;position:relative;">
-                <navigator hoverClass="none" url="/yl_welore/pages/packageA/good_info/index?id={{item.id}}">
+                <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/good_info/index?id={{item.id}}">
                     <view style="height:6em;width:6em;background-color:#fff;border-radius:7px;position:absolute;top:10px;box-shadow: 0px 0px 10px 0px rgba(245,245,245, 1);">
                         <image mode="aspectFit" src="{{item.product_img[0]}}" style="width:4em;height:4em;padding:1em;"></image>
                         <image mode="widthFix" src="../../style/icon/icon_coupon_special_tag_yellow_88_88.png" style="width:4em;position:absolute;left:0px;" wx:if="{{item.noble_exclusive==1}}"></image>
@@ -57,25 +57,25 @@
     <i-toast id="toast"></i-toast>
 </view>
 <view animation="{{animBack}}" class="weui-tabbar_boo" style="height:55px;">
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/canvas/index?type=0&fa_class=0&name=">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/canvas/index?type=0&fa_class=0&name=">
         <view animation="{{animCollect}}" class="img-style">
             <image src="../../style/icon/c98.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-10px;font-size:12px;">发涂鸦</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=1&fa_class=0&name=">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=1&fa_class=0&name=">
         <view animation="{{animTranspond}}" class="img-style">
             <image src="../../style/icon/b.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;font-size:12px;margin-top:-10px">发语音</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=0&fa_class=0&name=">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=0&fa_class=0&name=">
         <view animation="{{animInput}}" class="img-style">
             <image src="../../style/icon/a.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-10px;font-size:12px;">发图文</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=2&fa_class=0&name=">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=2&fa_class=0&name=">
         <view animation="{{animationM}}" class="img-style">
             <image src="../../style/icon/bpn.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-10px;font-size:12px;">发视频</view>

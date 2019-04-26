@@ -16,10 +16,10 @@
     <view style="padding-right:0px;font-size:14px;color:#000;text-align:center;">{{info.realm_name}}</view>
     <view style="padding-right:0px;font-size:13px;color:#999;text-align:center;">{{info.realm_synopsis}}</view>
     <view bindtap="ts_admin" data-id="{{id}}" data-qq="" data-type="0" style="font-size:24rpx;color:#FF9732;position:absolute;right:8%;top:37%;" wx:if="{{info.this_da_qq==0&&info.this_xiao_qq==0}}">投诉{{design.landgrave}}</view>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/user_banned/index?id={{id}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/user_banned/index?id={{id}}">
         <view data-id="{{id}}" data-qq="" data-type="0" style="font-size:13px;color:#fff;position:absolute;right:8%;top:22%;background-color:#FF9732;border-radius:20px;padding:3px 10px;" wx:if="{{info.this_da_qq==1||info.this_xiao_qq==1}}">禁言列表</view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/territory_interest/index?id={{id}}" wx:if="{{info.attention==1}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/territory_interest/index?id={{id}}" wx:if="{{info.attention==1}}">
         <view style="font-size:24rpx;color:#ffffff;position:absolute;right:8%;top:46%;background-color:#33CC66;border-radius:20px;padding:3px 10px;" wx:if="{{info.this_da_qq==1||info.this_xiao_qq==1}}">申请列表</view>
     </navigator>
 </view>
@@ -45,7 +45,7 @@
     </view>
     <view style="clear:both;height:0"></view>
     <view class="weui-cell" style="margin-top:20px;" wx:for="{{da_qq}}" wx:key="d_key">
-        <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
             <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                 <image src="../../../style/icon/aq4.png" style="width: 70px; height: 70px; display: block;border-radius:50rpx;position:absolute;left:-7px;top:-3px;" wx:if="{{da_qq.length!=0}}"></image>
                 <text style="letter-spacing:4px;position:absolute;font-size:10px;color:#ffffff;bottom:-4px;right:11px;">{{design.qq_name}}主</text>
@@ -70,7 +70,7 @@
     </view>
     <view style="clear:both;height:0"></view>
     <view class="weui-cell" style="margin-top:20px;" wx:for="{{xiao_qq}}" wx:key="x_key">
-        <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{item.id}}">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/my_home/index?id={{item.id}}">
             <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                 <image src="../../../style/icon/aq3.png" style="width: 70px; height: 70px; display: block;border-radius:50rpx;position:absolute;left:-7px;top:-3px;"></image>
                 <image src="{{item.user_head_sculpture}}" style="width: 55px; height: 55px; display: block;border-radius:50rpx;"></image>
@@ -83,7 +83,7 @@
         <view bindtap="ts_admin" data-id="{{item.id}}" data-qq="1" data-type="1" style="font-size:24rpx;color:#FF9732;" wx:if="{{item.id!=uid&&info.this_da_qq==0&&info.this_xiao_qq==0}}">投诉管理员</view>
     </view>
     <view bindtap="shenqing_da_qq" data-key="xiao" style="background-color:#03C900;font-size:24rpx;color:#ffffff;float:right;margin-top:40px;margin-right:5px;border-radius:20px;padding:4px 10px;" wx:if="{{xiao_qq.length<10&&da_qq.length>0&&info.this_xiao_qq==0&&info.this_da_qq==0}}">申请管理员</view>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/apply_admin/index?id={{id}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/apply_admin/index?id={{id}}">
         <view style="background-color:#03C900;font-size:24rpx;color:#ffffff;float:right;margin-top:40px;margin-right:5px;border-radius:20px;padding:4px 10px;" wx:if="{{xiao_qq.length<10&&da_qq.length>0&&info.this_xiao_qq==0&&info.this_da_qq==1}}">查看申请列表</view>
     </navigator>
 </view>

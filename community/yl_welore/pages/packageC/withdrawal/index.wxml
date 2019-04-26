@@ -48,13 +48,13 @@
         <input bindinput="get_withdraw_card" focus="true" placeholder="卡号" style="padding-left:10px;border-bottom:1px #F1F1F1 solid;width:82%;font-size:20px;height:43px;margin-top:7px;" type="number" value="{{withdraw_number}}"></input>
     </view>
     <view style="clear:both;height:0"></view>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageC/notice/index">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageC/notice/index">
         <view style="width:95%;text-align:center;padding:10px;color:#5197E4;font-size:14px;">
       提现说明
     </view>
     </navigator>
 </view>
-<navigator hoverClass="none" url="/yl_welore/pages/packageC/withdrawal_list/index">
+<navigator hoverClass="none" url="/community/yl_welore/pages/packageC/withdrawal_list/index">
     <view style="margin-top:20px;color:#000000;font-size:12px;text-align:center;">
         <i-icon type="prompt"></i-icon> 提现明细
   </view>

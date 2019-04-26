@@ -32,7 +32,7 @@ App({
             params: o,
             success: function(t) {
                 0 == t.data && wx.navigateTo({
-                    url: "/yl_welore/pages/black_house/index"
+                    url: "/community/yl_welore/pages/black_house/index"
                 });
             },
             fail: function() {
@@ -82,7 +82,7 @@ App({
     check_user_login: function() {
         this.getCache("userinfo") ? (this.authority(), this.get_forward(), this.check_user_status(), 
         this.get_design()) : wx.navigateTo({
-            url: "/yl_welore/pages/author/index"
+            url: "/community/yl_welore/pages/author/index"
         });
     },
     get_design: function() {
@@ -108,7 +108,7 @@ App({
             params: e,
             success: function(t) {
                 "error" == t.data && wx.navigateTo({
-                    url: "/yl_welore/pages/inspect/index"
+                    url: "/community/yl_welore/pages/inspect/index"
                 });
             },
             fail: function() {

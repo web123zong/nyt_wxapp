@@ -9,7 +9,7 @@
 <view style="width:91%;padding:20px;">
     <view class="weui-flex">
         <view class="weui-flex__item" style="text-align:center;">
-            <navigator hoverClass="none" url="/yl_welore/pages/packageC/confession/index">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageC/confession/index">
                 <view class="placeholder">
                     <image mode="widthFix" src="../../../style/icon/jy.png" style="width:30px;"></image>
                 </view>
@@ -17,7 +17,7 @@
             <view style="color:#999999;font-size:14px;">禁言申诉</view>
         </view>
         <view class="weui-flex__item" style="text-align:center;">
-            <navigator hoverClass="none" url="/yl_welore/pages/packageC/delete_posts/index">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageC/delete_posts/index">
                 <view class="placeholder">
                     <image mode="widthFix" src="../../../style/icon/hsz.png" style="width:30px;"></image>
                 </view>
@@ -25,7 +25,7 @@
             <view style="color:#999999;font-size:14px;">删帖回收站</view>
         </view>
         <view class="weui-flex__item" style="text-align:center;">
-            <navigator hoverClass="none" url="/yl_welore/pages/packageC/user_report/index">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageC/user_report/index">
                 <view class="placeholder">
                     <image mode="widthFix" src="../../../style/icon/jingbao.png" style="width:30px;"></image>
                 </view>
@@ -36,7 +36,7 @@
 </view>
 <view style="width:100%;height:5px;background-color:#F7F7FA;"></view>
 <view style="width:100%;margin:20px;color:#999999">疑问解答</view>
-<i-cell isLink title="{{item.trouble}}" url="/yl_welore/pages/packageC/help_info/index?id={{item.id}}" wx:for="{{info}}" wx:key="k_key"></i-cell>
+<i-cell isLink title="{{item.trouble}}" url="/community/yl_welore/pages/packageC/help_info/index?id={{item.id}}" wx:for="{{info}}" wx:key="k_key"></i-cell>
 <button bindtap="submit" hoverClass="none" openType="contact" style="padding-right:13px;text-align:left;padding-left:15px;font-size:14px;width:100%;height:48px;line-height:48px;">在线客服
   <image class="xwcms" src="../../../style/icon/fanhui.png" style="float:right;width:13px;height:13px;opacity:0.2;margin-top:16px;"></image>
 </button>

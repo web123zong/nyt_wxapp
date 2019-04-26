@@ -32,7 +32,7 @@ Page({
         var a = app.globalData.forward;
         return console.log(a), a ? {
             title: a.title,
-            path: "/yl_welore/pages/index/index",
+            path: "/community/yl_welore/pages/index/index",
             imageUrl: a.reis_img,
             success: function(a) {
                 $Toast({
@@ -46,7 +46,7 @@ Page({
             }
         } : {
             title: "您的好友给您发了一条信息",
-            path: "/yl_welore/pages/index/index",
+            path: "/community/yl_welore/pages/index/index",
             success: function(a) {
                 $Toast({
                     content: "转发成功"
