@@ -248,7 +248,7 @@ Page({
     },
     _backhome: function() {
         wx.reLaunch({
-            url: "/yl_welore/pages/index/index"
+            url: "/community/yl_welore/pages/index/index"
         });
     }
 });

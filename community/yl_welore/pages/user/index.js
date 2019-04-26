@@ -101,13 +101,13 @@ Page({
     get_aa_dd: function(t) {
         var a = t.detail;
         "home" == a.key && wx.redirectTo({
-            url: "/yl_welore/pages/index/index"
+            url: "/community/yl_welore/pages/index/index"
         }), "plaza" == a.key && wx.redirectTo({
-            url: "/yl_welore/pages/circle/index"
+            url: "/community/yl_welore/pages/circle/index"
         }), "goods" == a.key && wx.redirectTo({
-            url: "/yl_welore/pages/shell_mall/index"
+            url: "/community/yl_welore/pages/shell_mall/index"
         }), "user" == a.key && wx.redirectTo({
-            url: "/yl_welore/pages/user/index"
+            url: "/community/yl_welore/pages/user/index"
         }), "add" == a.key && this.plus();
     },
     get_diy: function() {
@@ -232,7 +232,7 @@ Page({
         var t = app.globalData.forward;
         return console.log(t), t ? {
             title: t.title,
-            path: "/yl_welore/pages/index/index",
+            path: "/community/yl_welore/pages/index/index",
             imageUrl: t.reis_img,
             success: function(t) {
                 $Toast({
@@ -246,7 +246,7 @@ Page({
             }
         } : {
             title: "您的好友给您发了一条信息",
-            path: "/yl_welore/pages/index/index",
+            path: "/community/yl_welore/pages/index/index",
             success: function(t) {
                 $Toast({
                     content: "转发成功"

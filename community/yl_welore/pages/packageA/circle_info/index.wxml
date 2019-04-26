@@ -16,13 +16,13 @@
     </view>
 </view>
 <view class="weui-cell" style="margin-top:{{height*2+20}}px;">
-    <navigator hoverClass="none" url="/yl_welore/pages/packageB/circle_info/index?id={{getInfo.id}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/circle_info/index?id={{getInfo.id}}">
         <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
             <image src="{{getInfo.realm_icon}}" style="width: 100rpx; height: 100rpx; display: block;border-radius:50%;"></image>
         </view>
     </navigator>
     <view class="weui-cell__bd">
-        <navigator hoverClass="none" url="/yl_welore/pages/packageB/circle_info/index?id={{getInfo.id}}">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/circle_info/index?id={{getInfo.id}}">
             <view style="font-size:18px;font-weight:600;">
                 <image src="../../../style/icon/mi.png" style="width:22px;height:22px;vertical-align:sub;" wx:if="{{getInfo.attention==1}}"></image>{{getInfo.realm_name}}</view>
             <view style="font-size: 12px;color: #888888;">关注 {{getInfo.concern}}　|　帖子 {{getInfo.is_paper_count}}</view>
@@ -38,7 +38,7 @@
     </i-tabs>
     <view wx:if="{{current=='tab1'}}">
         <view class="weui-cell" wx:for="{{top_list}}" wx:key="t_key">
-            <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type={{item.study_type}}">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type={{item.study_type}}">
                 <view class="weui-cell__bd">
                     <image mode="widthFix" src="../../../style/icon/d.png" style="width:25px;vertical-align:sub;float:left;"></image>
                     <view class="zhiding_gg" style="margin-left:10px;">
@@ -57,7 +57,7 @@
     <block wx:for="{{tory_list}}" wx:for-index="dataListindex" wx:key="t_index">
         <view class="weui-cells weui-cells_after-title" style="margin-bottom:10rpx;" wx:if="{{item.study_type==0}}">
             <view class="weui-cell">
-                <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
+                <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
                     <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                         <image src="{{item.user_head_sculpture}}" style="width: 60rpx; height: 60rpx; display: block;border-radius:50rpx;"></image>
                     </view>
@@ -78,7 +78,7 @@
                     </view>
                 </view>
             </view>
-            <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type=0">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type=0">
                 <view class="weui-cell" style="padding:0rpx 20rpx 20rpx 20rpx;">
                     <view class="weui-cell__hd text_num" style="position: relative;margin-right: 10px;color:{{item.study_title_color}};">
             {{item.study_title==''?item.study_content:item.study_title}}
@@ -124,7 +124,7 @@
             <view style="clear:both;height:0"></view>
             <view class="weui-flex" style="padding-bottom:10px;padding-top:10px;">
                 <view class="weui-flex__item">
-                    <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type=0">
+                    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type=0">
                         <button hoverClass="none">
                             <image mode="widthFix" src="../../../style/icon/kan.png" style="width: 22px; height: 22px;vertical-align:middle;"></image>
                             <text class="index_nav_name" style="color:#999999;font-size:13px;margin-left:15rpx;vertical-align:middle;">{{item.study_heat}}</text>
@@ -148,7 +148,7 @@
         </view>
         <view class="weui-cells weui-cells_after-title" style="margin-bottom:10rpx;" wx:if="{{item.study_type==1}}">
             <view class="weui-cell">
-                <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
+                <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
                     <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                         <image src="{{item.user_head_sculpture}}" style="width: 60rpx; height: 60rpx; display: block;border-radius:50rpx;"></image>
                     </view>
@@ -169,7 +169,7 @@
                     </view>
                 </view>
             </view>
-            <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type=1">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type=1">
                 <view class="weui-cell" style="padding:0rpx 20rpx 20rpx 20rpx;">
                     <view class="weui-cell__hd text_num" style="position: relative;margin-right: 10px;color:{{item.study_title_color}};">
             {{item.study_title==''?item.study_content:item.study_title}}
@@ -180,7 +180,7 @@
                 <view style="width:100%;">
                     <image bindtap="play" data-key="{{dataListindex}}" data-vo="{{item.study_voice}}" mode="aspectFill" src="../../../style/icon/evp_action_play.png" style="width:50rpx;height:50rpx;float:left;" wx:if="{{item.is_voice==false}}"></image>
                     <image bindtap="stop" data-key="{{dataListindex}}" data-vo="{{item.study_voice}}" mode="aspectFill" src="../../../style/icon/evp_action_pause.png" style="width:50rpx;height:50rpx;float:left;" wx:if="{{item.is_voice==true}}"></image>
-                    <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type=1">
+                    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type=1">
                         <view style="float:left;margin-left:20rpx;font-size:14px;margin-top:10rpx;">一段语音</view>
                         <view style="float:right;font-size:14px;margin-top:10rpx;">{{item.study_voice_time}}"</view>
                     </navigator>
@@ -189,7 +189,7 @@
             <view style="clear:both;height:0"></view>
             <view class="weui-flex" style="padding-bottom:10px;padding-top:10px;">
                 <view class="weui-flex__item">
-                    <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type=1">
+                    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type=1">
                         <button hoverClass="none">
                             <image mode="widthFix" src="../../../style/icon/kan.png" style="width: 22px; height: 22px;vertical-align:middle;"></image>
                             <text class="index_nav_name" style="color:#999999;font-size:13px;margin-left:15rpx;vertical-align:middle;">{{item.study_heat}}</text>
@@ -214,7 +214,7 @@
         <view style="height:5px;width:100%;background-color:#F4F4F4"></view>
         <view class="weui-cells weui-cells_after-title" wx:if="{{item.study_type==2}}">
             <view class="weui-cell">
-                <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
+                <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
                     <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                         <image src="{{item.user_head_sculpture}}" style="width: 35px; height: 35px; display: block;border-radius:50rpx;"></image>
                     </view>
@@ -228,14 +228,14 @@
                     <view style="font-size: 13px;color: #888888;">{{item.realm_name}} | {{item.adapter_time}}</view>
                 </view>
             </view>
-            <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type=2">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type=2">
                 <view class="weui-cell" style="padding:0rpx 20rpx 20rpx 20rpx;">
                     <view class="weui-cell__hd text_num" style="position: relative;margin-right: 10px;color:{{item.study_title_color}};">
             {{item.study_title==''?item.study_content:item.study_title}}
           </view>
                 </view>
             </navigator>
-            <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type=2">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type=2">
                 <view class="weui-cell" style="{{item.image_part.length==null?'background-color:#000;height:211px;':''}}overflow:hidden;width:91%;margin:0 auto;">
                     <image src="../../../style/icon/home_bf.png" style="width:50px;height:50px;position:absolute;left:44%;"></image>
                     <image mode="aspectFit" src="{{item.image_part[0]}}" style="width:70%;margin:0 auto;" wx:if="{{item.image_part.length>0}}"></image>
@@ -243,7 +243,7 @@
             </navigator>
             <view class="weui-flex" style="padding-bottom:10px;padding-top:10px;">
                 <view class="weui-flex__item">
-                    <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type=2">
+                    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type=2">
                         <button hoverClass="none">
                             <image mode="widthFix" src="../../../style/icon/kan.png" style="width: 30px;vertical-align:middle;"></image>
                             <text class="index_nav_name" style="color:#999999;font-size:13px;margin-left:15rpx;vertical-align:middle;">{{item.study_heat}}</text>
@@ -293,25 +293,25 @@
 </view>
 <i-load-more iClass="padd_padd" loading="{{false}}" tip="没有更多了" wx:if="{{load}}"></i-load-more>
 <view animation="{{animBack}}" class="weui-tabbar_boo" style="height:55px;" wx:if="{{getInfo.attention==1&&getInfo.is_trailing==true}}">
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/canvas/index?type=0&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/canvas/index?type=0&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
         <view animation="{{animCollect}}" class="img-style">
             <image src="../../../style/icon/ty.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-5px;font-size:12px;color:#FB6271;">发涂鸦</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=1&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=1&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
         <view animation="{{animTranspond}}" class="img-style">
             <image src="../../../style/icon/aaaaab.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;font-size:12px;color:#FDB32B;">发语音</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=0&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=0&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
         <view animation="{{animInput}}" class="img-style">
             <image src="../../../style/icon/zp.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-10px;font-size:12px;color:#00C900;">发图文</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=2&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=2&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
         <view animation="{{animationM}}" class="img-style" wx:if="{{version==0}}">
             <image src="../../../style/icon/sp1.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;font-size:12px;margin-top:-10px;color:#8E51DB;">发视频</view>
@@ -320,25 +320,25 @@
     <image animation="{{animPlus}}" bindtap="plus" class="img-plus-style" src="../../../style/icon/jiajiajia.png"></image>
 </view>
 <view animation="{{animBack}}" class="weui-tabbar_boo" style="height:55px;" wx:if="{{getInfo.attention==0}}">
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/canvas/index?type=0&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/canvas/index?type=0&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
         <view animation="{{animCollect}}" class="img-style">
             <image src="../../../style/icon/ty.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-5px;font-size:12px;color:#FB6271;">发涂鸦</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=1&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=1&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
         <view animation="{{animTranspond}}" class="img-style">
             <image src="../../../style/icon/aaaaab.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;font-size:12px;color:#FDB32B;">发语音</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=0&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=0&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
         <view animation="{{animInput}}" class="img-style">
             <image src="../../../style/icon/zp.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-10px;font-size:12px;color:#00C900;">发图文</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=2&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=2&fa_class={{getInfo.id}}&name={{getInfo.realm_name}}">
         <view animation="{{animationM}}" class="img-style" wx:if="{{version==0}}">
             <image src="../../../style/icon/sp1.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;font-size:12px;margin-top:-10px;color:#8E51DB;">发视频</view>

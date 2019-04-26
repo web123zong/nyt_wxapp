@@ -11,7 +11,7 @@
 <view style="clear:both;height:0"></view>
 <view style="padding:30rpx;">
     <view style="margin:20px 0px;" wx:for="{{user_list}}" wx:key="u_key">
-        <navigator hoverClass="none" url="/yl_welore/pages/packageA/circle_info/index?id={{item.id}}">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/circle_info/index?id={{item.id}}">
             <image src="{{item.realm_icon}}" style="width:50px;height:50px;float:left;border-radius:50%;"></image>
             <view style="float:left;margin-top:13px;margin-left:20px;font-size:14px;">{{item.realm_name}}</view>
         </navigator>

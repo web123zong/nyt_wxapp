@@ -106,7 +106,7 @@
         <view class="weui-cell__ft weui-cell__ft_in-access" style="position:static;"></view>
     </view>
     <button bindtap="submit" class="add_submit" disabled="{{is_submit}}" style="width:150px;margin-bottom:20px;margin-top:20px;">发布</button>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageC/post_notice/index">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageC/post_notice/index">
         <view style="color:#FF9966;text-align:center;font-size:14px;">
             <text style="vertical-align:middle;">发帖须知</text>
             <i-icon size="18" type="feedback_fill"></i-icon>
@@ -132,7 +132,7 @@
     <view class="demo-container" style="padding-top:{{(height*2+20)*2}}px">
         <view class="container">
             <view style="text-align:center;padding-top:20px;color:#000;font-size:14px;" wx:if="{{navRightItems.length==0}}">您没有关注任何{{design.landgrave}}</view>
-            <navigator hoverClass="none" openType="reLaunch" url="/yl_welore/pages/circle/index" wx:if="{{navRightItems.length==0}}">
+            <navigator hoverClass="none" openType="reLaunch" url="/community/yl_welore/pages/circle/index" wx:if="{{navRightItems.length==0}}">
                 <view style="text-align:center;color:#ffffff;background-color:#0099FF;width:25vw;margin:0 auto;margin-top:10px;">去关注</view>
             </navigator>
             <scroll-view bindscrolltolower="lower" class="nav_right" scrollY="true">

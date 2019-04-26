@@ -151,7 +151,8 @@
         "yl_welore/pages/packageC/withdrawal/index",
         "yl_welore/pages/packageC/withdrawal_list/index",
         "yl_welore/pages/packageC/user_invitation/index"
-      ]
+      ],
+      "independent": true
     },
     {
       "root":"bargain",

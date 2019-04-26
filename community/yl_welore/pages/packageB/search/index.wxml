@@ -39,7 +39,7 @@
     </view>
     <view style="width:100%;margin-top:10px;" wx:if="{{is_search_yes==0}}">
         <view style="float:left;font-size:14px;">暂时没有“{{get_search}}”的{{design.landgrave}}</view>
-        <navigator hoverClass="none" url="/yl_welore/pages/packageB/set_territory/index">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/set_territory/index">
             <view style="float:right;font-size:12px;color:#2E77ED;border:1px #2E77ED solid;border-radius:20px;padding:3px 10px;">
         抢先申请
       </view>
@@ -56,7 +56,7 @@
       </view>
             <view style="font-size: 13px;color: #888888;">{{item.concern}}人加入　|　{{item.paper_count}}条内容</view>
         </view>
-        <navigator hoverClass="none" url="/yl_welore/pages/packageA/circle_info/index?id={{item.id}}">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/circle_info/index?id={{item.id}}">
             <view style="color:#ffffff;font-size:12px;background-color:#00CC33;padding:10rpx;width:100rpx;text-align:center;border-radius:3px;">去{{design.landgrave}}</view>
         </navigator>
     </view>
@@ -81,7 +81,7 @@
                     <view style="font-size: 13px;color: #888888;">{{item.realm_name}} | {{item.adapter_time}}</view>
                 </view>
             </view>
-            <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type=0">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type=0">
                 <view class="weui-cell" style="padding:0rpx 20rpx 20rpx 20rpx;">
                     <view class="weui-cell__hd text_num" style="position: relative;margin-right: 10px;color:{{item.study_title_color}};">
             {{item.study_title==''?item.study_content:item.study_title}}
@@ -130,7 +130,7 @@
                     <view style="font-size: 13px;color: #888888;">{{item.realm_name}} | {{item.adapter_time}}</view>
                 </view>
             </view>
-            <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type=1">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type=1">
                 <view class="weui-cell" style="padding:0rpx 20rpx 20rpx 20rpx;">
                     <view class="weui-cell__hd text_num" style="position: relative;margin-right: 10px;color:{{item.study_title_color}};">
             {{item.study_title==''?item.study_content:item.study_title}}

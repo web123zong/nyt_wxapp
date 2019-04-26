@@ -12,7 +12,7 @@
     <view class="items" wx:for="{{list}}" wx:key="index">
         <view class="item">
             <view bindtouchend="touchE" bindtouchmove="touchM" bindtouchstart="touchS" class="inner txt" data-index="{{index}}" style="{{item.txtStyle}};background-color:#ffffff;height:100%;">
-                <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
+                <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
                     <image class="coll_img" src="{{item.user_head_sculpture}}"></image>
                     <view style="float:left;margin-left:10px;margin-top:15px;font-size:15px;">{{item.user_nick_name}}</view>
                 </navigator>
@@ -23,7 +23,7 @@
                     <view style="color:#ffffff;font-size:12px;background-color:#999999;padding:10rpx;width:60px;text-align:center;border-radius:3px;">取消关注</view>
                 </view>
                 <view style="clear:both;height:0"></view>
-                <navigator hoverClass="none" url="/yl_welore/pages/packageA/article/index?id={{item.id}}&type={{item.study_type}}">
+                <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/article/index?id={{item.id}}&type={{item.study_type}}">
                     <view style="height:60px;margin-top: 12px;">
                         <image class="coll_img_arr" mode="aspectFill" src="{{item.image_part[0]}}" wx:if="{{item.image_part[0]}}"></image>
                         <view class="text_num" style="line-height:27px;width:79%;"> {{item.study_title==''?item.study_content:item.study_title}}</view>

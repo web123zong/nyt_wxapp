@@ -33,7 +33,7 @@ Page({
                     content: e.data.msg
                 }), setTimeout(function() {
                     wx.redirectTo({
-                        url: "/yl_welore/pages/packageA/user_order/index"
+                        url: "/community/yl_welore/pages/packageA/user_order/index"
                     });
                 }, 1500)) : ($Toast({
                     content: e.data.msg
@@ -77,14 +77,14 @@ Page({
         1 != e.length ? (t.setData({
             show: !1
         }), wx.navigateBack()) : wx.reLaunch({
-            url: "/yl_welore/pages/index/index"
+            url: "/community/yl_welore/pages/index/index"
         });
     },
     onShareAppMessage: function() {
         var e = app.globalData.forward;
         return console.log(e), e ? {
             title: e.title,
-            path: "/yl_welore/pages/index/index",
+            path: "/community/yl_welore/pages/index/index",
             imageUrl: e.reis_img,
             success: function(e) {
                 $Toast({
@@ -98,7 +98,7 @@ Page({
             }
         } : {
             title: "您的好友给您发了一条信息",
-            path: "/yl_welore/pages/index/index",
+            path: "/community/yl_welore/pages/index/index",
             success: function(e) {
                 $Toast({
                     content: "转发成功"

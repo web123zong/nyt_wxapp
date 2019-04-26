@@ -22,7 +22,6 @@
     display: inline-block;
     z-index: 100;
 }
-
 .btn.block {
     display: block;
 }

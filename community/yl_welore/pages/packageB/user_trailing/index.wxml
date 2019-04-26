@@ -11,7 +11,7 @@
 <view style="margin-left:26px;font-weight:700;font-size:14px;margin-top:20px;">我加入的</view>
 <view class="" style="margin:15px;height:100%;width:100%;text-align:center;">
     <view style="width:31%;float:left;" wx:for="{{info}}" wx:key="i_key">
-        <navigator hoverClass="none" url="/yl_welore/pages/packageA/circle_info/index?id={{item.id}}">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/circle_info/index?id={{item.id}}">
             <view class="placeholder">
                 <image mode="scaleToFill" src="{{item.realm_icon}}" style="width:100%;height:110px;border-top-left-radius:8px;border-top-right-radius:8px;"></image>
                 <view style="color:#000000;font-size:12px;">{{item.realm_name}}</view>

@@ -473,7 +473,7 @@ wx.getSystemInfo({
         var t = app.globalData.forward;
         return console.log(t), t ? {
             title: t.title,
-            path: "/yl_welore/pages/index/index",
+            path: "/community/yl_welore/pages/index/index",
             imageUrl: t.reis_img,
             success: function(t) {
                 $Toast({
@@ -487,7 +487,7 @@ wx.getSystemInfo({
             }
         } : {
             title: "您的好友给您发了一条信息",
-            path: "/yl_welore/pages/index/index",
+            path: "/community/yl_welore/pages/index/index",
             success: function(t) {
                 $Toast({
                     content: "转发成功"
@@ -505,7 +505,7 @@ wx.getSystemInfo({
         1 != t.length ? (e.setData({
             show: !1
         }), wx.navigateBack()) : wx.reLaunch({
-            url: "/yl_welore/pages/index/index"
+            url: "/community/yl_welore/pages/index/index"
         });
     }
 });

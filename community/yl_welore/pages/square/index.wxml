@@ -30,7 +30,7 @@
                         <image src="../../style/icon/mi.png" style="width:22px;height:22px;vertical-align:sub;" wx:if="{{item.attention==1}}"></image>{{item.realm_name}}</view>
                     <view style="font-size: 10px;color: #888888;">{{item.concern}}人加入　{{item.is_paper_count}}条内容</view>
                 </view>
-                <navigator hoverClass="none" url="/yl_welore/pages/packageA/circle_info/index?id={{item.id}}">
+                <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/circle_info/index?id={{item.id}}">
                     <view style="color:#ffffff;font-size:12px;background-color:#00CC33;padding:10rpx;width:100rpx;text-align:center;border-radius:30px;">去{{design.landgrave}}</view>
                 </navigator>
             </view>

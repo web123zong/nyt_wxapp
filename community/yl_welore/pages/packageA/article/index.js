@@ -1395,10 +1395,10 @@ Page({
     },
     onShareAppMessage: function() {
         var t = app.globalData.forward;
-        return console.log("/yl_welore/pages/packageA/article/index?id=" + this.data.id + "&type=" + this.data.info_type), 
+        return console.log("/community/yl_welore/pages/packageA/article/index?id=" + this.data.id + "&type=" + this.data.info_type), 
         t ? {
             title: t.title,
-            path: "/yl_welore/pages/packageA/article/index?id=" + this.data.id + "&type=" + this.data.info_type,
+            path: "/community/yl_welore/pages/packageA/article/index?id=" + this.data.id + "&type=" + this.data.info_type,
             imageUrl: t.reis_img,
             success: function(t) {
                 $Toast({
@@ -1412,7 +1412,7 @@ Page({
             }
         } : {
             title: "您的好友给您发了一条信息",
-            path: "/yl_welore/pages/packageA/article/index?id=" + this.data.id + "&type=" + this.data.info_type,
+            path: "/community/yl_welore/pages/packageA/article/index?id=" + this.data.id + "&type=" + this.data.info_type,
             success: function(t) {
                 $Toast({
                     content: "转发成功"
@@ -1433,7 +1433,7 @@ Page({
     },
     _backhome: function() {
         wx.reLaunch({
-            url: "/yl_welore/pages/index/index"
+            url: "/community/yl_welore/pages/index/index"
         });
     }
 });

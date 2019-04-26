@@ -1,7 +1,7 @@
 <view class="nav-wrap" style="height: {{height*2+20}}px;">
     <view class="nav-title" style="line-height: {{height*2+44}}px;">{{nvabarData.title}}</view>
     <view style="display: flex; justify-content: space-around;flex-direction: column;height:100%;">
-        <navigator hoverClass="none" url="/yl_welore/pages/packageA/user_smail/index">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/user_smail/index">
             <view class="nav-capsule">
                 <view>
                     <i-badge count="{{user_info.user_male}}">
@@ -16,7 +16,7 @@
     <view class="">
         <view style="position:relative;">
             <view class="placeholder">
-                <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{user_info.id}}">
+                <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/my_home/index?id={{user_info.id}}">
                     <view style="float:left;width:440rpx;text-align:left;position:relative;left:66rpx;top:27rpx;">
                         <image src="{{user_info.user_head_sculpture}}" style="width:110rpx;height:110rpx;border-radius:100rpx;float:left;"></image>
                         <view class="course-name" style="color:#000000;position:relative;top:0rpx;left:15px;font-size:34rpx;">{{user_info.user_nick_name}}
@@ -38,7 +38,7 @@
 <view class="page__bd page__bd_spacing" style="background-color:#ffffff;border-top:1rpx solid #f9f9f9;">
     <i-row iClass="demo-row">
         <i-col iClass="demo-col" span="6" wx:if="{{copyright.noble_arbor==1}}">
-            <navigator hoverClass="none" url="/yl_welore/pages/packageB/user_vip/index">
+            <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/user_vip/index">
                 <view class="number_text">
                     <image mode="widthFix" src="../../style/icon/novip.png" style="width:30px;height:30px;" wx:if="{{user_info.is_vip==0}}"></image>
                     <image mode="widthFix" src="../../style/icon/vip.png" style="width:30px;height:30px;" wx:if="{{user_info.is_vip==1}}"></image>
@@ -46,19 +46,19 @@
             </navigator>
             <view class="info_text">{{user_info.vip_end_time==0?'开通会员':user_info.vip_end_time}}</view>
         </i-col>
-        <navigator hoverClass="none" url="/yl_welore/pages/packageB/user_follow/index?id={{user_info.id}}&type=1">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/user_follow/index?id={{user_info.id}}&type=1">
             <i-col iClass="demo-col" span="{{copyright.noble_arbor==1?6:8}}">
                 <view class="number_text">{{user_info.user_track}}</view>
                 <view class="info_text">关注</view>
             </i-col>
         </navigator>
-        <navigator hoverClass="none" url="/yl_welore/pages/packageB/user_follow/index?id={{user_info.id}}&type=2">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/user_follow/index?id={{user_info.id}}&type=2">
             <i-col iClass="demo-col" span="{{copyright.noble_arbor==1?6:8}}">
                 <view class="number_text">{{user_info.user_fs}}</view>
                 <view class="info_text">粉丝</view>
             </i-col>
         </navigator>
-        <navigator hoverClass="none" url="/yl_welore/pages/packageB/user_trailing/index?id={{user_info.id}}">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/user_trailing/index?id={{user_info.id}}">
             <i-col iClass="demo-col" span="{{copyright.noble_arbor==1?6:8}}">
                 <view class="number_text">{{user_info.trailing}}</view>
                 <view class="info_text">加入的{{design.landgrave}}</view>
@@ -67,58 +67,58 @@
     </i-row>
 </view>
 <view class="weui-cells weui-cells_after-title" style="margin-top:20rpx;line-height:2rem;">
-    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/yl_welore/pages/packageC/user_collection/index">
+    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageC/user_collection/index">
         <view class="weui-cell__hd">
             <image src="../../style/icon/sc.png" style="margin-right: 5px;vertical-align: sub;width:20px; height: 20px;"></image>
         </view>
         <view class="weui-cell__bd" style="font-size:30rpx;margin-left:20rpx;">我的收藏</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </navigator>
-    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/yl_welore/pages/packageA/circle_master/index">
+    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageA/circle_master/index">
         <view class="weui-cell__hd">
             <image src="../../style/icon/quanzi.png" style="margin-right: 5px;vertical-align: sub;width:20px; height: 20px;"></image>
         </view>
         <view class="weui-cell__bd" style="font-size:30rpx;margin-left:20rpx;">我的{{design.landgrave}}</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </navigator>
-    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/yl_welore/pages/packageA/gift_received/index">
+    <!-- <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageA/gift_received/index">
         <view class="weui-cell__hd">
             <image src="../../style/icon/lw.png" style="margin-right: 5px;vertical-align: sub;width:20px; height: 20px;"></image>
         </view>
         <view class="weui-cell__bd" style="font-size:30rpx;margin-left:20rpx;">我收到的礼物</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </navigator>
-    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/yl_welore/pages/packageA/user_order/index">
+    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageA/user_order/index">
         <view class="weui-cell__hd">
             <image src="../../style/icon/dui.png" style="margin-right: 5px;vertical-align: sub;width:20px; height: 20px;"></image>
         </view>
         <view class="weui-cell__bd" style="font-size:30rpx;margin-left:20rpx;">我的订单</view>
         <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size:13px;color:#000000;"></view>
-    </navigator>
-    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/yl_welore/pages/packageC/user_details/index" wx:if="{{copyright.wallet_arbor==1}}">
+    </navigator> -->
+    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageC/user_details/index" wx:if="{{copyright.wallet_arbor==1}}">
         <view class="weui-cell__hd">
             <image src="../../style/icon/money.png" style="margin-right: 5px;vertical-align: sub;width:20px; height: 20px;"></image>
         </view>
         <view class="weui-cell__bd" style="font-size:30rpx;margin-left:20rpx;">我的钱包</view>
         <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size:13px;color:#000000;"></view>
     </navigator>
-    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/yl_welore/pages/packageC/user_invitation/index">
+    <!-- <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageC/user_invitation/index">
         <view class="weui-cell__hd">
             <image src="../../style/icon/yq.png" style="margin-right: 5px;vertical-align: sub;width:20px; height: 20px;"></image>
         </view>
         <view class="weui-cell__bd" style="font-size:30rpx;margin-left:20rpx;">邀请好友</view>
         <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size:13px;color:#000000;"></view>
-    </navigator>
+    </navigator> -->
 </view>
 <view class="weui-cells weui-cells_after-title" style="margin-top:20rpx;">
-    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/yl_welore/pages/packageC/service_centre/index">
+    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageC/service_centre/index">
         <view class="weui-cell__hd">
             <image src="../../style/icon/kf.png" style="margin-right: 5px;vertical-align: sub;width:20px; height: 20px;"></image>
         </view>
         <view class="weui-cell__bd" style="font-size:30rpx;margin-left:20rpx;">服务中心</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </navigator>
-    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/yl_welore/pages/packageC/about_us/index">
+    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageC/about_us/index">
         <view class="weui-cell__hd">
             <image src="../../style/icon/gongsi.png" style="margin-right: 5px;vertical-align: sub;width:20px; height: 20px;"></image>
         </view>
@@ -134,25 +134,25 @@
 </view>
 <i-toast id="toast"></i-toast>
 <view animation="{{animBack}}" class="weui-tabbar_boo" style="height:55px;">
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/canvas/index?type=0&fa_class=0&name=">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/canvas/index?type=0&fa_class=0&name=">
         <view animation="{{animCollect}}" class="img-style">
             <image src="../../style/icon/c98.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-10px;font-size:12px;">发涂鸦</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=1&fa_class=0&name=">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=1&fa_class=0&name=">
         <view animation="{{animTranspond}}" class="img-style">
             <image src="../../style/icon/b.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;font-size:12px;margin-top:-10px">发语音</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=0&fa_class=0&name=">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=0&fa_class=0&name=">
         <view animation="{{animInput}}" class="img-style">
             <image src="../../style/icon/a.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-10px;font-size:12px;">发图文</view>
         </view>
     </navigator>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/add/index?type=2&fa_class=0&name=">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=2&fa_class=0&name=">
         <view animation="{{animationM}}" class="img-style">
             <image src="../../style/icon/bpn.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-10px;font-size:12px;">发视频</view>

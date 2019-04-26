@@ -20,7 +20,7 @@
     <view style="clear:both;height:0"></view>
     <view class="weui-cell" style="padding:0px 15px;">
         <view style="clear:both;height:0"></view>
-        <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{info.user_id}}">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/my_home/index?id={{info.user_id}}">
             <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                 <image src="{{info.user_head_sculpture}}" style="width: 60rpx; height: 60rpx; display: block;border-radius:50rpx;"></image>
             </view>
@@ -103,13 +103,13 @@
     </view>
     <view style="height:1px;width:100%;background-color:#F4F4F4"></view>
     <view style="min-height:120px;">
-        <view style="padding:10px 20px;font-size:14px;float:left;">
+        <view style="padding:10px 20px;font-size:14px;float:left;"> 
       礼物榜</view>
         <view style="padding:10px 20px;font-size:14px;float:left;">
             <image mode="widthFix" src="../../../style/icon/bxf.png" style="width:20px;vertical-align:sub;"></image>
             <text style="margin-left:5px;font-size:15px">{{liwu_count}}</text>
         </view>
-        <navigator hoverClass="none" url="/yl_welore/pages/packageB/user_guard/index?id={{info.user_id}}">
+        <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/user_guard/index?id={{info.user_id}}">
             <view style="padding:10px 20px;font-size:14px;float:right;">
                 <text style="margin-left:5px;font-size:12px;color:#AAAAAA;">查看完整榜单</text>
                 <i-icon color="#AAAAAA" type="enter"></i-icon>
@@ -138,7 +138,7 @@
     </view>
     <view style="clear:both;height:0"></view>
     <view style="height:1px;width:100%;background-color:#F4F4F4"></view>
-    <navigator hoverClass="none" url="/yl_welore/pages/packageA/circle_info/index?id={{info.realm_id}}">
+    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/circle_info/index?id={{info.realm_id}}">
         <view class="weui-cell">
             <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                 <image src="{{info.realm_icon}}" style="width: 60rpx; height: 60rpx; display: block;border-radius:50rpx;"></image>
@@ -164,7 +164,7 @@
         </view>
         <block wx:for="{{huifu_list}}" wx:for-index="hui_list_index" wx:for-item="hui" wx:key="hui_index">
             <view class="weui-cell" style="margin-top:10px;">
-                <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{hui.user_id}}">
+                <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/my_home/index?id={{hui.user_id}}">
                     <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                         <image src="{{hui.user_head_sculpture}}" style="width: 60rpx; height: 60rpx; display: block;border-radius:50rpx;"></image>
                     </view>
@@ -275,7 +275,7 @@
           <text style="color:#000000;">{{li_sum}}</text>
                 </view>
                 <view style="clear:both;height:0"></view>
-                <navigator hoverClass="none" url="/yl_welore/pages/packageC/user_details/index">
+                <navigator hoverClass="none" url="/community/yl_welore/pages/packageC/user_details/index">
                     <view style="font-size:14px;color:#A7A7A7;float:left;margin-top:10px;">我的{{design.currency}}
             <image mode="widthFix" src="../../../style/icon/jinbi.png" style="width:20px;height:20px;vertical-align:middle;"></image>
                         <text style="color:#000000;vertical-align:middle;">{{user_liwu.conch}}</text>
@@ -297,7 +297,7 @@
         <view style="clear:both;height:0"></view>
         <view>
             <view class="weui-cell">
-                <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{get_reply_and_info.user_id}}">
+                <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/my_home/index?id={{get_reply_and_info.user_id}}">
                     <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                         <image src="{{get_reply_and_info.user_head_sculpture}}" style="width: 60rpx; height: 60rpx; display: block;border-radius:50rpx;"></image>
                     </view>
@@ -317,7 +317,7 @@
                 <scroll-view scrollY bindscrolltolower="page_get_reply" style="height:350px;">
                     <view wx:for="{{get_reply_and_list}}" wx:key="r_key">
                         <view class="weui-cell">
-                            <navigator hoverClass="none" url="/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
+                            <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/my_home/index?id={{item.user_id}}">
                                 <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                                     <image src="{{item.user_head_sculpture}}" style="width: 60rpx; height: 60rpx; display: block;border-radius:50rpx;"></image>
                                 </view>

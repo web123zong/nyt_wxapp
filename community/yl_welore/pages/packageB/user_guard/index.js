@@ -61,7 +61,7 @@ Page(_defineProperty({
         1 != t.length ? (e.setData({
             show: !1
         }), wx.navigateBack()) : wx.reLaunch({
-            url: "/yl_welore/pages/index/index"
+            url: "/community/yl_welore/pages/index/index"
         });
     }
 }, "onShareAppMessage", function() {
@@ -70,7 +70,7 @@ Page(_defineProperty({
         show: !1
     }), t ? {
         title: t.title,
-        path: "/yl_welore/pages/packageB/my_home/index?id=" + this.data.id,
+        path: "/community/yl_welore/pages/packageB/my_home/index?id=" + this.data.id,
         imageUrl: t.reis_img,
         success: function(t) {
             $Toast({
@@ -84,7 +84,7 @@ Page(_defineProperty({
         }
     } : {
         title: "您的好友给您发了一条信息",
-        path: "/yl_welore/pages/packageB/my_home/index?id=" + this.data.id,
+        path: "/community/yl_welore/pages/packageB/my_home/index?id=" + this.data.id,
         success: function(t) {
             $Toast({
                 content: "转发成功"
