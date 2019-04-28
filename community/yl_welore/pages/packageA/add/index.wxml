@@ -84,9 +84,9 @@
     <i-cell title="禁止转发">
         <i-switch bind:change="onChange" slot="footer" value="{{is_open}}"></i-switch>
     </i-cell>
-    <i-cell title="红包帖子" wx:if="{{version==0}}">
+    <!-- <i-cell title="红包帖子" wx:if="{{version==0}}">
         <i-switch bind:change="onChange_red_paper" slot="footer" value="{{red_paper}}"></i-switch>
-    </i-cell>
+    </i-cell> -->
     <view wx:if="{{red_paper}}">
         <view style="padding:12px 15px;font-size:12px;">我的{{design.confer}}余额：{{user_info.fraction}}</view>
         <i-input right bind:change="get_red_money" mode="wrapped" placeholder="填写金额" title="总金额" type="digit" value="{{xian_red_money}}" wx:if="{{red_type==1}}"></i-input>

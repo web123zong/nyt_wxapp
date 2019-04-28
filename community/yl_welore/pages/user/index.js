@@ -105,7 +105,7 @@ Page({
         }), "plaza" == a.key && wx.redirectTo({
             url: "/community/yl_welore/pages/circle/index"
         }), "goods" == a.key && wx.redirectTo({
-            url: "/community/yl_welore/pages/shell_mall/index"
+          url: "/community/yl_welore/pages/packageC/user_collection/index"
         }), "user" == a.key && wx.redirectTo({
             url: "/community/yl_welore/pages/user/index"
         }), "add" == a.key && this.plus();

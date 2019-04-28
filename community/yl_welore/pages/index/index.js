@@ -34,7 +34,7 @@ Page({
         }), "plaza" == e.key && wx.redirectTo({
             url: "/community/yl_welore/pages/circle/index"
         }), "goods" == e.key && wx.redirectTo({
-          url: "/community/yl_welore/pages/shell_mall/index"
+          url: "/community/yl_welore/pages/packageC/user_collection/index"
         }), "user" == e.key && wx.redirectTo({
           url: "/community/yl_welore/pages/user/index"
         }), "add" == e.key && this.plus();
