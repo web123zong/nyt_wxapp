@@ -238,7 +238,7 @@ App({
   check_user_login: function () {
     this.getCachecommu("userinfo") ? (this.authority(), this.get_forward(), this.check_user_status(),
       this.get_design()) : wx.navigateTo({
-        url: "/community/community/yl_welore/pages/author/index"
+        url: "/community/yl_welore/pages/author/index"
       });
   },
   get_design: function () {
