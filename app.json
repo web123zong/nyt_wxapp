@@ -181,26 +181,26 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "static/images/tabbar/icon-1.png",
-        "selectedIconPath": "static/images/tabbar/icon-1-active.png"
+        "iconPath": "static/images/tabbar/icon-27.png",
+        "selectedIconPath": "static/images/tabbar/icon-27-active.png"
       },
       {
         "pagePath": "pages/goods/index/index",
         "text": "全部分类",
-        "iconPath": "static/images/tabbar/icon-2.png",
-        "selectedIconPath": "static/images/tabbar/icon-2-active.png"
+        "iconPath": "static/images/tabbar/icon-20.png",
+        "selectedIconPath": "static/images/tabbar/icon-20-active.png"
       },
       {
         "pagePath": "pages/member/cart/index",
         "text": "购物车",
-        "iconPath": "static/images/tabbar/icon-4.png",
-        "selectedIconPath": "static/images/tabbar/icon-4-active.png"
+        "iconPath": "static/images/tabbar/icon-22.png",
+        "selectedIconPath": "static/images/tabbar/icon-22-active.png"
       },
       {
         "pagePath": "pages/member/index/index",
         "text": "会员中心",
-        "iconPath": "static/images/tabbar/icon-5.png",
-        "selectedIconPath": "static/images/tabbar/icon-5-active.png"
+        "iconPath": "static/images/tabbar/icon-26.png",
+        "selectedIconPath": "static/images/tabbar/icon-26-active.png"
       }
     ]
   },

@@ -103,7 +103,7 @@ Page({
         "home" == a.key && wx.redirectTo({
             url: "/community/yl_welore/pages/index/index"
         }), "plaza" == a.key && wx.redirectTo({
-            url: "/community/yl_welore/pages/circle/index"
+          url: "/community/yl_welore/pages/square/index"
         }), "goods" == a.key && wx.redirectTo({
           url: "/community/yl_welore/pages/packageC/user_collection/index"
         }), "user" == a.key && wx.redirectTo({

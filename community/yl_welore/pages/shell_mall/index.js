@@ -30,7 +30,7 @@ Page({
         "home" == e.key && wx.redirectTo({
             url: "/community/yl_welore/pages/index/index"
         }), "plaza" == e.key && wx.redirectTo({
-            url: "/community/yl_welore/pages/circle/index"
+          url: "/community/yl_welore/pages/square/index"
         }), "goods" == e.key && wx.redirectTo({
           url: "/community/yl_welore/pages/packageC/user_collection/index"
         }), "user" == e.key && wx.redirectTo({

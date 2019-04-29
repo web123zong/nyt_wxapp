@@ -47,19 +47,22 @@
             <view class="info_text">{{user_info.vip_end_time==0?'开通会员':user_info.vip_end_time}}</view>
         </i-col> -->
         <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/user_follow/index?id={{user_info.id}}&type=1">
-            <i-col iClass="demo-col" span="{{copyright.noble_arbor==1?6:8}}">
+            <!-- <i-col iClass="demo-col" span="{{copyright.noble_arbor==1?6:8}}"> -->
+            <i-col iClass="demo-col" span="8">
                 <view class="number_text">{{user_info.user_track}}</view>
                 <view class="info_text">关注</view>
             </i-col>
         </navigator>
         <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/user_follow/index?id={{user_info.id}}&type=2">
-            <i-col iClass="demo-col" span="{{copyright.noble_arbor==1?6:8}}">
+            <!-- <i-col iClass="demo-col" span="{{copyright.noble_arbor==1?6:8}}"> -->
+            <i-col iClass="demo-col" span="8">
                 <view class="number_text">{{user_info.user_fs}}</view>
                 <view class="info_text">粉丝</view>
             </i-col>
         </navigator>
         <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/user_trailing/index?id={{user_info.id}}">
-            <i-col iClass="demo-col" span="{{copyright.noble_arbor==1?6:8}}">
+            <!-- <i-col iClass="demo-col" span="{{copyright.noble_arbor==1?6:8}}"> -->
+            <i-col iClass="demo-col" span="8">
                 <view class="number_text">{{user_info.trailing}}</view>
                 <view class="info_text">加入的{{design.landgrave}}</view>
             </i-col>

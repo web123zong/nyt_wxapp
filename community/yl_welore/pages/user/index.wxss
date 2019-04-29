@@ -3,7 +3,9 @@
     height: 6em;
     line-height: 2.3em;
 }
-
+.i-col-span-6{
+  width: 33% !important;
+}
 page {
     background: #f9f9f9;
 }
