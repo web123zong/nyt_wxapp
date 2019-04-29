@@ -37,7 +37,7 @@
 </view>
 <view class="page__bd page__bd_spacing" style="background-color:#ffffff;border-top:1rpx solid #f9f9f9;">
     <i-row iClass="demo-row">
-        <i-col iClass="demo-col" span="6" wx:if="{{copyright.noble_arbor==1}}">
+        <!-- <i-col iClass="demo-col" span="6" wx:if="{{copyright.noble_arbor==1}}">
             <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/user_vip/index">
                 <view class="number_text">
                     <image mode="widthFix" src="../../style/icon/novip.png" style="width:30px;height:30px;" wx:if="{{user_info.is_vip==0}}"></image>
@@ -45,7 +45,7 @@
                 </view>
             </navigator>
             <view class="info_text">{{user_info.vip_end_time==0?'开通会员':user_info.vip_end_time}}</view>
-        </i-col>
+        </i-col> -->
         <navigator hoverClass="none" url="/community/yl_welore/pages/packageB/user_follow/index?id={{user_info.id}}&type=1">
             <i-col iClass="demo-col" span="{{copyright.noble_arbor==1?6:8}}">
                 <view class="number_text">{{user_info.user_track}}</view>
@@ -95,13 +95,13 @@
         <view class="weui-cell__bd" style="font-size:30rpx;margin-left:20rpx;">我的订单</view>
         <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size:13px;color:#000000;"></view>
     </navigator> -->
-    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageC/user_details/index" wx:if="{{copyright.wallet_arbor==1}}">
+    <!-- <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageC/user_details/index" wx:if="{{copyright.wallet_arbor==1}}">
         <view class="weui-cell__hd">
             <image src="../../style/icon/money.png" style="margin-right: 5px;vertical-align: sub;width:20px; height: 20px;"></image>
         </view>
         <view class="weui-cell__bd" style="font-size:30rpx;margin-left:20rpx;">我的钱包</view>
         <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size:13px;color:#000000;"></view>
-    </navigator>
+    </navigator> -->
     <!-- <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageC/user_invitation/index">
         <view class="weui-cell__hd">
             <image src="../../style/icon/yq.png" style="margin-right: 5px;vertical-align: sub;width:20px; height: 20px;"></image>
@@ -118,13 +118,13 @@
         <view class="weui-cell__bd" style="font-size:30rpx;margin-left:20rpx;">服务中心</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </navigator>
-    <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageC/about_us/index">
+    <!-- <navigator class="weui-cell weui-cell_access" hoverClass="none" url="/community/yl_welore/pages/packageC/about_us/index">
         <view class="weui-cell__hd">
             <image src="../../style/icon/gongsi.png" style="margin-right: 5px;vertical-align: sub;width:20px; height: 20px;"></image>
         </view>
         <view class="weui-cell__bd" style="font-size:30rpx;margin-left:20rpx;">关于我们</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-    </navigator>
+    </navigator> -->
 </view>
 <view class="weui-footer" style="margin-top:20px;margin-bottom:70px;">
     <view class="weui-footer__links">
@@ -134,12 +134,12 @@
 </view>
 <i-toast id="toast"></i-toast>
 <view animation="{{animBack}}" class="weui-tabbar_boo" style="height:55px;">
-    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/canvas/index?type=0&fa_class=0&name=">
+    <!-- <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/canvas/index?type=0&fa_class=0&name=">
         <view animation="{{animCollect}}" class="img-style">
             <image src="../../style/icon/c98.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-10px;font-size:12px;">发涂鸦</view>
         </view>
-    </navigator>
+    </navigator> -->
     <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=1&fa_class=0&name=">
         <view animation="{{animTranspond}}" class="img-style">
             <image src="../../style/icon/b.png" style="width:100%;height:100%;"></image>

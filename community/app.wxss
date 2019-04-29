@@ -2,7 +2,6 @@ page {
     line-height: 1.6;
     font-family: -apple-system-font,Helvetica Neue,sans-serif;
 }
-
 icon {
     vertical-align: middle;
 }
@@ -104,10 +103,6 @@ icon {
 .weui-cell__ft_in-access {
     padding-right: 13px;
     position: relative;
-}
-.nav-title{
-  height:88rpx;
-  margin: 10rpx 0;
 }
 .weui-cell__ft_in-access:after {
     content: " ";

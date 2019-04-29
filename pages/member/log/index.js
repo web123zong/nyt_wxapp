@@ -3,7 +3,7 @@ var t = getApp(), a = t.requirejs("core");
 Page({
     data: {
         icons: t.requirejs("icons"),
-        type: 0,
+        type: 'credit2',
         isopen: !1,
         page: 1,
         loaded: !1,
@@ -36,7 +36,7 @@ Page({
             };
             if (1 == t.data.page) {
                 e.isopen = a.isopen;
-                var i = "充值记录";
+                var i = "记录明细";
                 1 == a.isopen && (i = a.moneytext + "明细"), wx.setNavigationBarTitle({
                     title: i
                 });

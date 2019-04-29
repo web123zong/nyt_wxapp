@@ -26,7 +26,6 @@ page {
     font-size: 36rpx;
     color: #2c2b2b;
     font-weight: 600;
-    height: 44px;
 }
 
 .nav-capsule {

@@ -167,9 +167,9 @@
     }
   ],
   "window": {
-    "backgroundColor": "#fafafa",
+    "backgroundColor": "#ac8062",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#ac8062",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -209,7 +209,9 @@
       "desc": "用于小程序位置接口的效果展示"
     }
   },
-  "navigateToMiniProgramAppIdList": [],
+  "navigateToMiniProgramAppIdList": [
+    "wx6cd9255b1f403f58"
+  ],
   "debug": false,
   "sitemapLocation": "sitemap.json"
 }

@@ -20,6 +20,9 @@
         <view class='course-left flex flex-col'>
           <view class='course-title'>
             {{item.title}}
+            <view class='salesman'>
+            联系微信：<text class='wx' bindtap='copyText' data-text="{{item.salesman}}">点击复制</text>
+            </view>
           </view>
           <view class='bar'>
             <progress percent="{{item.info.bili}}" show-info font-size="14" active="true" />

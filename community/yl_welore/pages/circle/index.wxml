@@ -106,12 +106,12 @@
 <i-load-more loading="{{false}}" tip="没有更多了" wx:if="{{di_msg}}"></i-load-more>
 <view style="height:50px;" wx:if="{{di_msg}}"></view>
 <view animation="{{animBack}}" class="weui-tabbar_boo" style="height:55px;">
-    <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/canvas/index?type=0&fa_class=0&name=">
+    <!-- <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/canvas/index?type=0&fa_class=0&name=">
         <view animation="{{animCollect}}" class="img-style">
             <image src="../../style/icon/c98.png" style="width:100%;height:100%;"></image>
             <view style="text-align:center;margin-top:-10px;font-size:12px;">发涂鸦</view>
         </view>
-    </navigator>
+    </navigator> -->
     <navigator hoverClass="none" url="/community/yl_welore/pages/packageA/add/index?type=1&fa_class=0&name=">
         <view animation="{{animTranspond}}" class="img-style">
             <image src="../../style/icon/b.png" style="width:100%;height:100%;"></image>

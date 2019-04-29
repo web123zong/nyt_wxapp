@@ -95,7 +95,7 @@
             </view>
         </view>
         <view class="fui-cell-group fui-cell-click" openType="navigate">
-            <navigator class="fui-cell" hoverClass="none" url="/pages/member/course/index" wx:if="{{member.usemembercard}}">
+            <navigator class="fui-cell" hoverClass="none" url="/pages/member/course/index">
                 <view class="fui-cell-icon">
                     <text class="icox icox-bargain"></text>
                 </view>

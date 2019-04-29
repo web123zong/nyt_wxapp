@@ -8,7 +8,7 @@ App({
     var e = this;
     wx.getSystemInfo({
       success: function(t) {
-        "0" == t.model.indexOf("iPhone X") ? e.setCache("isIpx", t.model) : e.setCache("isIpx", "");
+        "0" == t.model.indexOf("iPhone X") ? e.setCache("isIpx", t.model) : e.setCache("isIpx", ""),        e.globalData.height = t.statusBarHeight; 
       }
     });
     var t = this;

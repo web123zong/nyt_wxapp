@@ -17,6 +17,21 @@ Page({
   onPullDownRefresh: function() {
     wx.stopPullDownRefresh();
   },
+  copyText: function (e) {
+    console.log(e)
+    wx.setClipboardData({
+      data: e.currentTarget.dataset.text,
+      success: function (res) {
+        wx.getClipboardData({
+          success: function (res) {
+            wx.showToast({
+              title: '复制成功'
+            })
+          }
+        })
+      }
+    })
+  },
   getList: function() {
     var t = this;
     e.get("shop/get_my_course", {}, function(e) {
@@ -56,8 +71,8 @@ Page({
       success(res) {
         latitude = res.latitude;
         longitude = res.longitude;
-        distance = t.calculateDistance(26,116,26,116);
-        // distance = t.calculateDistance(lat, lng, latitude, longitude);
+        // distance = t.calculateDistance(26,116,26,116);
+        distance = t.calculateDistance(lat, lng, latitude, longitude);
         if(distance < 100){
           e.get("shop/clock_in", { type: 1, mark: mark}, function (result) {
             if (result.result == 1){

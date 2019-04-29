@@ -84,8 +84,15 @@ view {
 }
 
 .li-btn {
-  background-color: #fd5454;
+  background-color: #ac8062;
   color: #fff;
   border-radius: 8rpx;
   font-size: 27rpx;
+}
+.salesman{
+  font-size: 25rpx;
+}
+.wx{
+  font-size: 25rpx;
+  color:forestgreen;
 }
