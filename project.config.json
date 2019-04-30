@@ -64,13 +64,8 @@
 				},
 				{
 					"id": -1,
-<<<<<<< HEAD
-					"name": "yl_welore_index",
-					"pathName": "community/yl_welore/pages/author/index",
-=======
 					"name": "社區",
 					"pathName": "community/yl_welore/pages/index/index",
->>>>>>> 235aede7c508f3e84276a7d1965cc719f43be7ed
 					"scene": null
 				}
 			]

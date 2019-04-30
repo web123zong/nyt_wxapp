@@ -181,26 +181,26 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "static/images/tabbar/icon-27.png",
-        "selectedIconPath": "static/images/tabbar/icon-27-active.png"
+        "iconPath": "static/images/tabbar/nindex.png",
+        "selectedIconPath": "static/images/tabbar/nindexon.png"
       },
       {
         "pagePath": "pages/goods/index/index",
         "text": "全部分类",
-        "iconPath": "static/images/tabbar/icon-20.png",
-        "selectedIconPath": "static/images/tabbar/icon-20-active.png"
+        "iconPath": "static/images/tabbar/nall.png",
+        "selectedIconPath": "static/images/tabbar/nallon.png"
       },
       {
         "pagePath": "pages/member/cart/index",
         "text": "购物车",
-        "iconPath": "static/images/tabbar/icon-22.png",
-        "selectedIconPath": "static/images/tabbar/icon-22-active.png"
+        "iconPath": "static/images/tabbar/ncart.png",
+        "selectedIconPath": "static/images/tabbar/ncarton.png"
       },
       {
         "pagePath": "pages/member/index/index",
         "text": "会员中心",
-        "iconPath": "static/images/tabbar/icon-26.png",
-        "selectedIconPath": "static/images/tabbar/icon-26-active.png"
+        "iconPath": "static/images/tabbar/nself.png",
+        "selectedIconPath": "static/images/tabbar/nselfon.png"
       }
     ]
   },
@@ -208,10 +208,5 @@
     "scope.userLocation": {
       "desc": "用于小程序位置接口的效果展示"
     }
-  },
-  "navigateToMiniProgramAppIdList": [
-    "wx6cd9255b1f403f58"
-  ],
-  "debug": false,
-  "sitemapLocation": "sitemap.json"
+  }
 }
