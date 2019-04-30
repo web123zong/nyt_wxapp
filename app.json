@@ -208,10 +208,5 @@
     "scope.userLocation": {
       "desc": "用于小程序位置接口的效果展示"
     }
-  },
-  "navigateToMiniProgramAppIdList": [
-    "wx6cd9255b1f403f58"
-  ],
-  "debug": false,
-  "sitemapLocation": "sitemap.json"
+  }
 }
