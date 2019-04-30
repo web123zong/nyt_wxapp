@@ -43,11 +43,14 @@ Page({
         });
     },
     submit: function(t) {
+      var listartbuy = this.data.list[0].startbuy;
         var i = t.currentTarget.dataset, r = this;
         console.error(i), -1 != i.startbuy && ("0" != i.stock ? e.post("membercard.order.create_order", {
             id: i.id
         }, function(t) {
-            0 == t.error ? wx.navigateTo({
+          0 == t.error ? listartbuy == 0 ? wx.navigateTo({
+            url: "/pages/member/recharge/index"
+          })  : wx.navigateTo({
                 url: "/pages/member/membercard/pay/index?order_id=" + t.order.order_id
             }) : a.toast(r, t.message);
         }) : a.toast(r, "库存不足"));

@@ -23,10 +23,10 @@
     </view>
     <view class="member_header" style="background:{{diyitem.style.background}};border-color:{{diyitem.style.background}}"></view>
     <block wx:if="{{member.usemembercard}}">
-        <navigator class="member_card" hoverClass="none" openType="navigate" url="/pages/member/membercard/index?hasmembercard={{member.hasmembercard}}">
+        <navigator class="member_card" hoverClass="none" openType="navigate" url="/pages/member/membercard/detail/index?id=4">
             <image class="icon" src="/static/images/icon-huangguan.png"></image>
             <view class="title">我的会员卡</view>
-            <view class="card-num">已拥有{{member.hasbuycardnum}}张</view>
+            <!-- <view class="card-num">已拥有{{member.hasbuycardnum}}张</view> -->
         </navigator>
         <image class="cover-img" src="/static/images/cover.png"></image>
     </block>

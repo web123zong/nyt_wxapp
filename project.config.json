@@ -64,8 +64,9 @@
 				},
 				{
 					"id": -1,
-					"name": "社區",
+					"name": "社区",
 					"pathName": "community/yl_welore/pages/index/index",
+          "query": "",
 					"scene": null
 				}
 			]
